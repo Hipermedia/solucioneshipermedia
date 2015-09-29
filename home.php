@@ -15,43 +15,45 @@
 get_header(); ?>
 
 	<!-- Cover -->
-	<?php primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
-
-	<?php newsSlider(); ?>
+	<?php primalSlider(); ?>
 
 	<?php sauteBlocks();  //  Bloques de contenido salteados ?>
 
-	<?php videoSlider(); ?>
+	<?php imgridPortfolio(); ?>
 
 	<?php starchiQuote(); ?>
 
-	<?php filmstripSlider(); ?>
-	
-	<!-- Bloques -->
-	<?php primalBlocks(); //  Bloques de contenido primordiales ?>
-	
-	<?php primalSlider(); ?>
+	<?php meteoroContact(); ?>
 
-	<?php primalTabs(); ?>
+
+	<?php //primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
+
+	<?php //newsSlider(); ?>
+
+	<?php //videoSlider(); ?>
+
+	<?php //filmstripSlider(); ?>
+
+	<!-- Bloques -->
+	<?php //primalBlocks(); //  Bloques de contenido primordiales ?>
+	
+	<?php //primalTabs(); ?>
 
 	<!-- Texto -->
-	<?php primalText(); //  Bloques de contenido primordiales ?>
+	<?php //primalText(); //  Bloques de contenido primordiales ?>
 	
 	<!-- Testimonios -->
-	<?php primalTestimony(); //  Bloques de contenido primordiales ?>
+	<?php //primalTestimony(); //  Bloques de contenido primordiales ?>
 
-	<?php gallerySlider(); ?>
-
-	<?php meteoroContact(); ?>
+	<?php //gallerySlider(); ?>
 	
-	<?php primalContact(); ?>
+	<?php //primalContact(); ?>
 
-	<?php completeContact(); ?>
+	<?php //completeContact(); ?>
 
-	<?php primalGallery(); ?>
+	<?php //primalGallery(); ?>
 
-	<?php primalPricing(); ?>
+	<?php //primalPricing(); ?>
 
-	<?php imgridPortfolio(); ?>
 
 <?php get_footer(); ?>
