@@ -1,5 +1,10 @@
 jQuery(document).ready(function($) {
 
+
+
+  
+
+
   // pequeña función para desactivar los eventos en el mapa
   $('.MeteoroContact-mapa').click(function () {
       $('.MeteoroContact-mapa iframe').css("pointer-events", "auto");
@@ -122,4 +127,5 @@ jQuery(document).ready(function($) {
     $('#unfilter-button').click(function () {
       $("#imgrid-portfolio").imgrid('filter', 'all'); //Note that group1 not carries '.'
     })
+
 });
