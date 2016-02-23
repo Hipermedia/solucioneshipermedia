@@ -3,28 +3,40 @@
 /*------------------------------------------------*/
 // PRIMAL
 .PrimalBlocks {
-	padding-top: 6rem;
+	/*padding-top: 6rem;*/
+	background: white;
 	
 	.PrimalBlocks-contenido {
 		// Responsive
 		@media (max-width: $desktop-width) {
 			padding: 1.5rem;
 		}
+
 		.PrimalBlocks-titulo {
-			color: $main-color-dark;
+			color: #012D62;
+			text-align: center;
+			font-weight: bold;
+			font-size: 3rem;
 		}
+
 		.PrimalBlocks-subtitulo {
 			margin: 0 0 3rem;
+			text-align: center;
+			color: #444444;
+			font-size: 1.2rem;
 		}
+
 		.PrimalBlocks-block {
 			display: block;
 			float: left;
 			width: 30.3333333%;
-			margin: 0 1.5% 3rem;	
-			padding: .75rem;
-			@include gray-fancy-box; 
-			background-color: #eaeaea;
-			text-align: center;
+			margin: 0 1.5% 3rem;
+			position: relative;
+			z-index: 0;	
+			/*padding: .75rem;*/
+			/*@include gray-fancy-box; */
+			/*background-color: #eaeaea;*/
+			/*text-align: center;*/
 			// Responsive
 			@media (max-width: $tablet-width) {
 				width: 44%;
@@ -34,20 +46,112 @@
 				width: 100%;
 				margin: 0 0 3rem;
 			}
+
 			.PrimalBlocks-blockFigure {
-				// ...
+				-webkit-box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.6);
+				-moz-box-shadow:    0px 4px 5px 0px rgba(50, 50, 50, 0.6);
+				box-shadow:         0px 4px 5px 0px rgba(50, 50, 50, 0.6);
+
+				img {
+					width: 100%;
+				}
 			}
-			.PrimalBlocks-blockTitulo {
-				// ...
+
+			.PrimalBlocks-blockHeading {
+				overflow: hidden;
+				margin-top: .5rem;
+
+				.PrimalBlocks-blockTitulo {
+					width: 86%;
+					float: left;
+					font-size: 1rem;
+					font-weight: bold;
+					color: #222222;
+					padding-right: 2rem;
+					line-height: 1.6;
+				}
+
+				.PrimalBlocks-blockFecha {
+					width: 13%;
+					float: left;
+					text-align: center;
+					margin-top: 1.3rem;
+					-webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.6);
+					-moz-box-shadow:    0px 1px 3px 0px rgba(50, 50, 50, 0.6);
+					box-shadow:         0px 1px 3px 0px rgba(50, 50, 50, 0.6);
+
+					.mes,.dia {
+						line-height: 1;
+					}
+
+					.mes {
+						background: #0055A5;
+						width: 100%;
+						height: 20px;
+						display: block;
+						color: white;
+					}
+
+					.dia {
+						background: #CCCCCC;
+						width: 100%;
+						height: 30px;
+						display: block;
+						padding-top: .3rem;
+						color: #666666;
+						font-weight: bold;
+					}
+				}
 			}
-			.PrimalBlocks-blockSubtitulo {
-				// ...
-			}
+
 			.PrimalBlocks-blockDescripcion {
-				// ...
+				margin-bottom: .5rem;
+				padding-top: 1rem;
+
+				p {
+					
+					a {
+						width: 35%;
+						background: #0055A5;
+						color: white;
+						padding: 1rem .5rem;
+						float: left;
+						text-align: center;
+						border-radius: 2px;
+						text-shadow: none;
+						position: relative;
+						@include transicion ();
+
+						&::after {
+							content: "";
+							height: 6px;
+							width: 100%;
+							display: block;
+							background: #003D7E; 
+							position: absolute;
+							bottom: -4px;
+							left: 0;
+							z-index: -1;
+							border-bottom-right-radius: 2px;
+							border-bottom-left-radius: 2px;
+						}
+					}
+				}
 			}
-			.PrimalBlocks-blockAction {
-				// ...
+
+			.PrimalBlocks-blockCategorias {
+				float: left;
+				width: 65%;
+				text-align: right;
+				padding-left: 20%;
+
+				.titulo {
+					margin: 0;
+				}
+				
+				.categorias {
+					color: #F37A1F;
+				}
 			}
 		}
 	}

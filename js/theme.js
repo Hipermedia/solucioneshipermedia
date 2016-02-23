@@ -1,10 +1,5 @@
 jQuery(document).ready(function($) {
 
-
-
-  
-
-
   // pequeña función para desactivar los eventos en el mapa
   $('.MeteoroContact-mapa').click(function () {
       $('.MeteoroContact-mapa iframe').css("pointer-events", "auto");
@@ -18,10 +13,13 @@ jQuery(document).ready(function($) {
 	// Reduce el header al hacer scrolldown; la animación se realiza con CSS
 	$(window).on("scroll touchmove", function () {
 		$('#header').toggleClass('Header--tiny', $(document).scrollTop() > 0);
+    $('#header-logo').toggleClass('tiny', $(document).scrollTop() > 0);
 		$('#header-logo img').toggleClass('tiny', $(document).scrollTop() > 0);
 		$('#header-social').toggleClass('u-remove', $(document).scrollTop() > 0);
 		$('#header #searchform').toggleClass('u-remove', $(document).scrollTop() > 0);
 		$('#header-main-nav').toggleClass('tiny', $(document).scrollTop() > 0);	
+    $('#Header-contenidoBefore').toggleClass('tiny', $(document).scrollTop() > 0); 
+    $('#Header-contenido').toggleClass('tiny', $(document).scrollTop() > 0); 
 	});
 	
 	// Versión responsive del menú; oculta la navegación y en su defecto aparece un botón para mostrar u ocultarl la navegación
@@ -106,8 +104,8 @@ jQuery(document).ready(function($) {
         animation: "slide",
         animationLoop: true,
         slideshow: true,
-        itemWidth: 300,
-        controlNav: false,
+        itemWidth: 233,
+        directionNav: false,
         prevText: "",
         nextText: ""
     });
@@ -116,16 +114,41 @@ jQuery(document).ready(function($) {
 
     $("#imgrid-portfolio").imgrid({
       thumbSize: 300,
-      thumbHoverEffect: "lexi",
+      thumbHoverEffect: "ming",
       thumbLightbox: false
     });
 
-    $('#filter-button').click(function () {
-      $("#imgrid-portfolio").imgrid('filter', 'group1'); //Note that group1 not carries '.'
-    })
+    $('#filter-educacion').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'educacion');
+    });
+
+    $('#filter-tienda').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'tienda-en-linea');
+    });
+
+    $('#filter-comerciales').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'comerciales');
+    });
+
+    $('#filter-institucionales').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'institucionales');
+    });
+
+    $('#filter-otros').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'otros');
+    });
 
     $('#unfilter-button').click(function () {
-      $("#imgrid-portfolio").imgrid('filter', 'all'); //Note that group1 not carries '.'
-    })
+      $("#imgrid-portfolio").imgrid('filter', 'all');
+    });
 
+    $("#unfilter-button").addClass('active');
+
+    $(function() {
+      var menues = $("#filters li h3"); 
+          menues.click(function() {
+          menues.removeClass("active");
+          $(this).addClass("active");
+      });
+    });
 });

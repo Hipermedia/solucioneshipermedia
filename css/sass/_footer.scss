@@ -7,9 +7,71 @@
 ----------------------------------------------- */
 
 .Footer {
-	padding-top: 2rem;	
+	/*padding-top: 2rem;	*/
 	background: $footer-bg;
-	
+	color: white;
+	overflow: hidden;
+	padding-bottom: 1.5rem;
+
+	@media (max-width: $tablet-width) {
+		text-align: center;
+	}
+
+	.Footer-bloque {
+		float: left;
+		width: 33%;
+
+		@media (max-width: $tablet-width) {
+			width: 100%;
+			float: none;
+		}
+
+		&:nth-child(2) {
+			padding: 0 3.5rem;
+		}
+
+		.Footer-bloqueLogo {
+
+			img {
+				width: auto;
+			}
+		}
+
+		.Footer-bloqueContacto {
+			padding-bottom: .5rem;
+
+			i {
+				margin-right: .5rem;
+			}
+		}
+
+		.Footer-bloqueRedes {
+
+			a {
+				color: white;
+				border-right: 2px solid #844120;
+				padding: 0 .5rem;
+
+				&:last-child {
+					border: none;
+				}
+
+				i {
+
+				}
+			}
+		}
+
+		ul {
+			list-style: none;
+			border-left: 3px solid #AF551A;
+			padding: 0 0 0 1rem; 
+
+			li {
+
+			}
+		}
+	}
 
 	.Footer-creditos {
 		width: 100%; 

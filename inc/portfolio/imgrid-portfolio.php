@@ -1,43 +1,55 @@
-<section class="u-contenedor">
-	<div class="imgrid" id="imgrid-portfolio">
-		<figure class="filter-class group1">
-		    <img src="http://lorempixel.com/output/transport-q-c-640-480-7.jpg" alt="img01"/>
-		    <figcaption>
-		        <h2>Title</h2>
-		        <p class="icon-links">
-		            <a href="#"><span class="fa fa-download"></span></a>
-		            <a href="#"><span class="fa fa-eye"></span></a>
-		            <a href="#"><span class="fa fa-share"></span></a>
-		        </p>
-		        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, doloribus!</p>
-		    </figcaption>
-		</figure>
-		<figure class="filter-class">
-		    <img src="http://lorempixel.com/output/food-q-c-640-480-9.jpg" alt="img01"/>
-		    <figcaption>
-		        <h2>Title</h2>
-		        <p class="icon-links">
-		            <a href="#"><span class="fa fa-download"></span></a>
-		            <a href="#"><span class="fa fa-eye"></span></a>
-		            <a href="#"><span class="fa fa-share"></span></a>
-		        </p>
-		        <p class="description">Lorem ipsum dolor sit.</p>
-		    </figcaption>
-		</figure>
-		<figure class="filter-class group1">
-		    <img src="http://lorempixel.com/output/transport-q-c-640-480-7.jpg" alt="img01"/>
-		    <figcaption>
-		        <h2>Title</h2>
-		        <p class="icon-links">
-		            <a href="#"><span class="fa fa-download"></span></a>
-		            <a href="#"><span class="fa fa-eye"></span></a>
-		            <a href="#"><span class="fa fa-share"></span></a>
-		        </p>
-		        <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-		    </figcaption>
-		</figure>
+<section class="Portafolio-contenedor u-contenedorCompleto">
+	
+	<div class="sprite">
+		
 	</div>
 
-	<h3 id="filter-button" class="btn btn-default" role="button">Coches</h3>
-	<h3 id="unfilter-button" class="btn btn-default" role="button">Todos</h3>
+	<div class="Portafolio-heading u-contenedor">
+
+
+
+		<h2>Nuestro <span>trabajo</span></h2>
+		<p>Una muestra de los proyectos que hemos hecho con dedicación, amor y mucho café</p>
+
+		<ul id="filters">
+			<li><h3 id="unfilter-button">Todos</h3></li>
+			<li><h3 id="filter-educacion">Educación</h3></li>
+			<li><h3 id="filter-tienda">Tienda en línea</h3></li>
+			<li><h3 id="filter-comerciales">Comerciales</h3></li>
+			<li><h3 id="filter-institucionales">Institucionales</h3></li>
+			<li><h3 id="filter-otros">Otros</h3></li>
+		</ul>
+
+	</div>
+
+	<div class="imgrid Portafolio" id="imgrid-portfolio">
+		<?php
+		$args = array('cat' => 2, 'posts_per_page' => 6); 
+		$the_query = new WP_Query( $args ); ?>
+		<?php if ( $the_query->have_posts() ) : ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>
+			<?php $categorias = get_the_category(); ?>
+			<?php //var_dump($categorias); ?>
+			<?php 
+				$cat1 = $categorias[0]->slug;
+				$cat2 = $categorias[1]->slug;
+			?>
+				<figure class="filter-class Portafolio-block <?php echo $cat1." ".$cat2; ?>">
+				    <img src="<?php echo $url; ?>" alt="<?php the_title(); ?>"/>
+				    <figcaption>
+				        <h2><?php the_title(); ?></h2>
+				        <p class="description"><?php the_excerpt(); ?></p>
+				    </figcaption>
+				</figure>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		<?php else : ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif; ?>
+	</div>
+
+	<div class="sprite-2">
+		
+	</div>
 </section>

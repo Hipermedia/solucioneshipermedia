@@ -3,54 +3,210 @@
 /*------------------------------------------------*/
 
 .StarchiQuote {
-	background-size: 100% 100%;
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-image: url('images/videochat.jpg');
 	position: relative;
-	opacity: .8;
-	height: 35vh;
+	/*opacity: .8;*/
+	/*height: 35vh;*/
+	/*background: #012351;*/
 	@media (max-width: $tablet-width) {
 		background-size: auto auto;
 		background-attachment: local; 
 	}
 
+	.sprite {
+		background-image: url('images/spriteslides.png');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 73px;
+		display: block;
+		background-position: center -295px;
+	}
+
+	.sprite-2 {
+		background-image: url('images/spriteslides.png');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 73px;
+		display: block;
+		background-position: center -385px;
+	}
+
 	.StarchiQuote-contenido {
+		padding-bottom: 1rem;
+		position: relative;
+		z-index: 0;
 		@media (max-width: $desktop-width) {
 			padding: 1.5rem;
+			text-align: center;
 		}
 		@media (max-width: $tablet-width) {
 			padding: 0;
 		}
 
 		.StarchiQuote-texto {
-			text-align: center;
+			/*text-align: center;*/
+			width: 450px;
 			padding: 3rem 0;
+			display: inline-block;
+			color: white;
 			@media (max-width: $smaller-width) {
 				padding: 0;
 			}
-					
-			.StarchiQuote-textoIcono {
-				font-size: 11rem;
-				color: white;
-				opacity: .3;
-				font-style: italic;
-				position: absolute;
-				margin-left: auto;
-				margin-right: auto;
-				left: 0;
-				right: 0;
-			}
 
 			.StarchiQuote-textoCita {
-				text-shadow: 1px 1px black;
-				font-style: italic;
-				color: white;
-				font-size: 3rem;
+				/*text-shadow: 1px 1px black;*/
+				/*font-style: italic;*/
+				/*color: white;*/
+				/*font-size: 3rem;*/
+				font-size: 1.3rem;
 				@media (max-width: $smaller-width) {
 					font-size: 1.8rem;
 					margin-top: 5%;
 				}
+
+				strong {
+					
+				}
+			}
+
+			p {
+				/*max*/
+			}
+		}
+
+		.StarchiQuote-aside {
+			width: 58%;
+			display: inline-block;
+			text-align: center;
+
+			.StarchiQuote-contenidoBtn {
+				padding: .85rem 1.8rem;
+				font-size: 20px;
+				color: #fff;
+				border-radius: 2px;
+				text-shadow: none;
+				margin: 0 auto 1rem;
+				display: block;
+				width: auto;
+				background: #008ABC;
+				text-align: center;
+				/*width: 55%;*/
+				position: relative;
+				z-index: 0;
+				max-width: 375px;
+				@include transicion ();
+
+				&::after {
+					content: "";
+					height: 6px;
+					width: 100%;
+					display: block;
+					background: #045D85; 
+					position: absolute;
+					bottom: -4px;
+					left: 0;
+					z-index: -1;
+					border-bottom-right-radius: 2px;
+					border-bottom-left-radius: 2px;
+				}
+			}
+
+			span {
+				color: white;
+				margin-top: 1.5rem;
+			}
+		}
+	}
+}
+
+.Newsletter {
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-image: url('images/newsletter.jpg');
+
+	.sprite {
+		background-image: url('images/spriteslides.png');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 73px;
+		display: block;
+		background-position: center -492px;
+	}
+
+	.sprite-2 {
+		background-image: url('images/spriteslides.png');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 82px;
+		display: block;
+		background-position: center -574px;
+	}
+
+	.Newsletter-texto {
+
+		h2 {
+			font-weight: bold !important;
+			color: #FDA82F;
+			font-size: 2rem !important;
+
+			strong {
+				color: white;
+				font-size: 2.5rem !important;
+			}
+		}
+
+		p {
+
+		}
+	}
+
+	.Newsletter-aside {
+
+		.correo {
+			width: 50%;
+			margin-bottom: 1rem;
+			background: #EEEEEE;
+			border-radius: 2px;
+			padding: .5rem 1rem;
+			-webkit-box-shadow: inset 0px 3px 5px 0px rgba(112, 112, 112, 0.75);
+			-moz-box-shadow:    inset 0px 3px 5px 0px rgba(112, 112, 112, 0.75);
+			box-shadow:         inset 0px 3px 5px 0px rgba(112, 112, 112, 0.75);
+			border: none;
+		}
+
+		.StarchiQuote-contenidoBtn {
+			padding: .85rem 1rem !important;
+			font-size: 20px;
+			color: #fff;
+			border-radius: 2px;
+			text-shadow: none;
+			margin: 0 auto 1rem;
+			display: block;
+			width: auto;
+			background: #008ABC;
+			text-align: center;
+			/*width: 55%;*/
+			position: relative;
+			z-index: 0;
+			max-width: 230px !important;
+			@include transicion ();
+
+			&::after {
+				content: "";
+				height: 6px;
+				width: 100%;
+				display: block;
+				background: #045D85; 
+				position: absolute;
+				bottom: -4px;
+				left: 0;
+				z-index: -1;
+				border-bottom-right-radius: 2px;
+				border-bottom-left-radius: 2px;
 			}
 		}
 	}

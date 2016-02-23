@@ -3,46 +3,31 @@
 ------------------------------------------------------------------- */ 
 ?>
 <!-- columnistas-destacados -->
-<section class="FilmstripSlider u-contenedor">
-	<!-- <div class="wrapper"> -->
-		<div id="slider-filmstrip" class="flexslider FilmstripSlider-contenido">
-		  	<ul class="slides">
-		  		<li class="FilmstripSlider-slide">
-		  			<img class="FilmstripSlider-slideImagen" src="<?php the_field('imagenPortada', 'option'); ?>" alt="">
-		  			<h2 class="FilmstripSlider-slideTitulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-		  			<h3 class="FilmstripSlider-slideSubtitulo">Lorem ipsum dolor sit amet, consectetur.</h3>
-		  		</li>
-
-		  		<li class="FilmstripSlider-slide">
-		  			<img class="FilmstripSlider-slideImagen" src="<?php the_field('imagenPortada', 'option'); ?>" alt="">
-		  			<h2 class="FilmstripSlider-slideTitulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-		  			<h3 class="FilmstripSlider-slideSubtitulo">Lorem ipsum dolor sit amet, consectetur.</h3>
-		  		</li>
-
-		  		<li class="FilmstripSlider-slide">
-		  			<img class="FilmstripSlider-slideImagen" src="<?php the_field('imagenPortada', 'option'); ?>" alt="">
-		  			<h2 class="FilmstripSlider-slideTitulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-		  			<h3 class="FilmstripSlider-slideSubtitulo">Lorem ipsum dolor sit amet, consectetur.</h3>
-		  		</li>
-
-		  		<li class="FilmstripSlider-slide">
-		  			<img class="FilmstripSlider-slideImagen" src="<?php the_field('imagenPortada', 'option'); ?>" alt="">
-		  			<h2 class="FilmstripSlider-slideTitulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-		  			<h3 class="FilmstripSlider-slideSubtitulo">Lorem ipsum dolor sit amet, consectetur.</h3>
-		  		</li>
-
-		  		<li class="FilmstripSlider-slide">
-		  			<img class="FilmstripSlider-slideImagen" src="<?php the_field('imagenPortada', 'option'); ?>" alt="">
-		  			<h2 class="FilmstripSlider-slideTitulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-		  			<h3 class="FilmstripSlider-slideSubtitulo">Lorem ipsum dolor sit amet, consectetur.</h3>
-		  		</li>
-
-		  		<li class="FilmstripSlider-slide">
-		  			<img class="FilmstripSlider-slideImagen" src="<?php the_field('imagenPortada', 'option'); ?>" alt="">
-		  			<h2 class="FilmstripSlider-slideTitulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-		  			<h3 class="FilmstripSlider-slideSubtitulo">Lorem ipsum dolor sit amet, consectetur.</h3>
-		  		</li>
-		  	</ul>
+<div class="Filmstrip">
+	
+	<section class="FilmstripSlider u-contenedor">
+		<!-- <div class="wrapper"> -->
+		<h2 class="FilmstripSlider-titulo"><?php the_field('tituloClientes', 'option'); ?></h2>
+		<div class="FilmstripSlider-sliderContenedor">
+			<p class="FilmstripSlider-sliderTitulo"><?php the_field('subtituloClientes', 'option'); ?></p>
+			<div id="slider-filmstrip" class="flexslider FilmstripSlider-contenido">
+			  	<ul class="slides">
+			  		<?php while(have_rows('clientesFelices', 'option')) : the_row(); ?>
+			  		<li class="FilmstripSlider-slide">
+			  			<a href="<?php the_sub_field('url', 'option'); ?>">
+			  				<img class="FilmstripSlider-slideImagen" src="<?php the_sub_field('logo', 'option'); ?>" alt="">
+			  			</a>
+			  		</li>
+			  		<?php endwhile; ?>
+			  	</ul>
+			</div>
 		</div>
-	<!-- </div> -->
-</section>
+
+		<figure class="FilmstripSlider-figure">
+			<img src="<?php echo get_plantilla_url().'/images/filmstrip.png'; ?>" alt="">
+		</figure>
+
+		<!-- </div> -->
+	</section>
+
+</div>

@@ -56,18 +56,23 @@
 <body <?php body_class(); ?>>
 
 <header id="header" class="Header" role="banner" >
-    <section class="Header-contenido">
+
+    <div id="Header-contenidoBefore" class="Header-contenidoBefore">
+        <div class="u-contenedor">
+            <a class="correo" href=""><i class="fa fa-envelope"></i><?php the_field('correoContacto', 'option'); ?></a>
+            <p class="movil"><i class="fa fa-mobile"></i><i class="fa fa-whatsapp"></i><?php the_field('movilContacto', 'option'); ?></p>
+            <!-- Redes sociales -->
+            <?php primalSocialShare(); ?>
+        </div>
+    </div>
+    <section id="Header-contenido" class="Header-contenido">
         
         <!-- Logo -->
         <a href="<?php inicio_url(); ?>" id="header-logo" class="Header-logo  animated flipInX">
             <img src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
         </a>
-
-        <!-- Redes sociales -->
-        <?php primalSocialShare(); ?>
-        
         <!-- Formulario de búsqueda [Catacterística superior] -->
-        <?php get_search_form(); ?>
+        <?php //get_search_form(); ?>
         
         <!-- Menú principal -->  
         <?php primalNav(); ?>

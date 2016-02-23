@@ -8,14 +8,15 @@
 	clear: both;
 	display: block;
 	height: $header-height;
-	// background: $header-bg;
-	background: none;
+	height: auto;
+	background: $header-bg;
+	/*background: none;*/
 	margin: 0 auto;
 	z-index: 99;
 	position: relative; // Cambiar de relative a fixed si se quiere integrar el heade ral contenido
 	left: 0;
 	right: 0;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	@include transicion();
 	
 	@media (max-width: $desktop-width) {
@@ -31,21 +32,102 @@
 	}
 
 	&--tiny {
-		height: 60px;
+		height: 58px;
 		background: $header-bg;
 		position: fixed;
 
 		@media (max-width: $tablet-width) {
 			height: auto;
+			position: relative;
+		}
+
+		&:hover {
+			height: 95px;
+		}
+	}
+
+	&:hover {
+
+		.Header-contenidoBefore {
+
+			&.tiny {
+				height: 40px;
+			}
+		}
+
+		.Header-contenido {
+
+		}
+	}
+
+	.Header-contenidoBefore {
+		background: #0054AA;
+		text-align: right;
+		color: white;
+		height: 40px;
+		border-bottom: 3px solid rgba(0,46,105,.8);
+		@include transicion();
+
+		&.tiny {
+			height: 0;
+
+			&:hover {
+				height: 40px;
+			}
+		}
+
+		.u-contenedor {
+			height: 100%;
+
+			.correo, .movil, .social {
+				display: inline-block;
+				margin: 0;
+				vertical-align: middle;
+				padding-top: .5rem;
+			}
+
+			.correo, .movil {
+				color: white;
+				padding-right: 3rem;
+
+				i {
+					margin-right: .3rem;
+				}
+			}
+
+			.movil {
+
+
+			}
+
+			.social {
+
+				a {
+					color: white;
+					border-left: 2px solid rgba(0,46,105,.5);
+					padding: 1rem .5rem;
+					text-align: center;
+
+					i {
+						padding-left: .3rem;
+					}
+				}
+			}
 		}
 	}
 	
 	.Header-contenido {
 		display: block;
-		height: 100%;
+		/*height: 100%;*/
+		height: 80px;
 		width: $desktop-width;
 		position: relative;
 		margin: 0 auto;
+		@include transicion();
+
+		&.tiny {
+			height: 55px;
+		}
 
 		@media (max-width: $desktop-width) {
 			max-width: $desktop-width;
@@ -56,16 +138,26 @@
 
 		/* Logo */
 		.Header-logo {
-			padding: .5rem 1rem;
+			margin-top: -2.5rem;
+			/*padding: .5rem 1rem;*/
 			display: block;
-			float: left;
+			/*float: left;*/
 			max-width: 320px;
+			position: absolute;
+			top: 0;
+			@include transicion();
+
+			&.tiny {
+				margin-top: 0;
+			}
 
 			@media (max-width: $tablet-width) {
 				max-width: 100%;
 				width: 100%;
 				text-align: center;
 				padding: 1rem 0;
+				position: relative;
+				margin-top: 0;
 			}
 			img {
 				max-width: 320px;

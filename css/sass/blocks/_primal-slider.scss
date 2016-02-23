@@ -1,37 +1,25 @@
 .PrimalSlider {
-	/*height: 100vh;*/
 
 	.PrimalSlider-contenido {
 		border: none;
 		margin: 0;
 		overflow: hidden;
-		/*display: inline-block;*/
 
 		.PrimalSlider-slide {
 			position: relative;
 
 			.PrimalSlider-slideImagen {
-				width: 100%;
+				width: auto;
 			}
 
 			.PrimalSlider-slideCaption {
-				text-shadow: 1px 2px #000;
-				text-align: center;
 				color: white;
 				position: absolute;
-				width: 100%;
+				width: $desktop-width;
 				bottom: 0;
 				right: 0;
 				left: 0;
-				padding-bottom: 7rem;
-				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,1+100 */
-				background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-				background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-				background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-				background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
-				background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+				margin: 0 auto;
 				@media (max-width: $desktop-width) {
 					padding-bottom: 3rem;
 				}
@@ -40,46 +28,79 @@
 					height: 100%;
 				}
 
-				.PrimalSlider-slideTitulo {
-					padding-bottom: .8rem;
-					font-size: 4.5rem;
-					@media (max-width: $desktop-width) {
-						font-size: 3rem;
+				.PrimalSlider-captionText {
+					display: inline-block;
+					width: 50%;
+					vertical-align: middle;
+					position: relative;
+					z-index: 0;
+
+					.PrimalSlider-slideTitulo {
+						text-shadow: 1px 2px #000;
+						margin: .3rem 0;
+						font-size: 2.5rem;
+						@media (max-width: $desktop-width) {
+							font-size: 3rem;
+						}
+						@media (max-width: $tablet-width) {
+							font-size: 2rem;
+						}
 					}
-					@media (max-width: $tablet-width) {
-						font-size: 2rem;
+
+					.PrimalSlider-slideSubtitulo {
+						margin: 1.5rem 0;
+						padding: 0;
+						@media (max-width: $desktop-width) {
+							font-size: 1.5rem;
+						}
+						@media (max-width: $tablet-width) {
+							font-size: 1rem;
+						}
+					}
+
+					.PrimalSlider-slideBoton {
+						padding: .8rem 0;
+						font-size: 20px;
+						color: #fff;
+						border-radius: 2px;
+						text-shadow: none;
+						margin: 0 auto;
+						display: block;
+						background: #008ABC;
+						text-align: center;
+						width: 55%;
+						position: relative;
+						@include transicion ();
+
+						&::after {
+							content: "";
+							height: 6px;
+							width: 100%;
+							display: block;
+							background: #045D85; 
+							position: absolute;
+							bottom: -4px;
+							z-index: -1;
+							border-bottom-right-radius: 2px;
+							border-bottom-left-radius: 2px;
+						}
 					}
 				}
+				
+				.PrimalSlider-captionImage {
+					display: inline-block;
+					width: 49%;
+					vertical-align: middle;
 
-				.PrimalSlider-slideSubtitulo {
-					margin-bottom: 1.5rem;
-					padding: 0;
-					text-transform: uppercase;
-					font-size: 2rem;
-					@media (max-width: $desktop-width) {
-						font-size: 1.5rem;
-					}
-					@media (max-width: $tablet-width) {
-						font-size: 1rem;
-					}
-				}
-
-				.PrimalSlider-slideBoton {
-					border: 2px #fff solid;
-					padding: .3rem .8rem .5rem;
-					font-size: 20px;
-					color: #fff;
-					font-weight: bold;
-					border-radius: 3px;
-					text-shadow: none;
-					@include transicion ();
-
-					&:hover {
-						background: #00BBE7;
-						color: white;
-						border: 2px #00BBE7 solid;
+					img {
+						width: auto;
+						display: block;
+						margin: 0 auto;
 					}
 				}
+				
+
+
 			}
 		}
 

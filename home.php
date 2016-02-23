@@ -15,44 +15,64 @@
 get_header(); ?>
 
 	<!-- Cover -->
+	<?php //primalCover(); ?>
+
 	<?php primalSlider(); ?>
 
-	<?php sauteBlocks();  //  Bloques de contenido salteados ?>
+	<?php primalTabs(); ?>
 
 	<?php imgridPortfolio(); ?>
 
+	<?php primalTestimony();?>
+
 	<?php starchiQuote(); ?>
 
-	<?php meteoroContact(); ?>
+	<?php primalBlocks(); ?>
 
+	<!-- StarchiBloques -->
+	<section class="StarchiQuote Newsletter u-contenedorCompleto">
+		<div class="sprite">
+			
+		</div>
+		<!-- Contenedor -->
+		<div class="StarchiQuote-contenido u-contenedor">
+			<div class="StarchiQuote-texto Newsletter-texto">
+				<h2 class="StarchiQuote-textoCita"><strong>Suscríbete</strong> al newsletter</h2>
+				<p>Recibe correos con promociones e información interesante para ti.</p>
+			</div>
 
-	<?php //primalCover(); // Cover con imágen de fondo, imagen principal y títulos ?>
+			<div class="StarchiQuote-aside Newsletter-aside">
+				<input class="correo" type="text" placeholder="Introduce tu correo">
+				<a class="StarchiQuote-contenidoBtn" href="">Me quiero suscribir</a>
+			</div>
+		</div>
 
-	<?php //newsSlider(); ?>
+		<div class="sprite-2">
+			
+		</div>
+	</section>
 
-	<?php //videoSlider(); ?>
-
-	<?php //filmstripSlider(); ?>
-
-	<!-- Bloques -->
-	<?php //primalBlocks(); //  Bloques de contenido primordiales ?>
+	<?php filmstripSlider(); ?>
 	
-	<?php //primalTabs(); ?>
+	<section class="Contacto">
 
-	<!-- Texto -->
-	<?php //primalText(); //  Bloques de contenido primordiales ?>
-	
-	<!-- Testimonios -->
-	<?php //primalTestimony(); //  Bloques de contenido primordiales ?>
+		<div class="sprite">
+			
+		</div>
+		
+		<div class="u-contenedor">
+			<p class="Contacto-titulo">Contáctanos</p>
+			<h2 class="Contacto-subtitulo">Construyamos juntos la mejor solución web para ti o tus clientes</h2>
+			<div class="Contacto-formulario">
+				<?php echo do_shortcode(get_field('cf7Contacto', 'option')); ?>
+			</div>
+		</div>
 
-	<?php //gallerySlider(); ?>
-	
-	<?php //primalContact(); ?>
+		<div class="sprite-2">
+		    
+		</div>
+	</section>
 
-	<?php //completeContact(); ?>
 
-	<?php //primalGallery(); ?>
-
-	<?php //primalPricing(); ?>
 
 <?php get_footer(); ?>
