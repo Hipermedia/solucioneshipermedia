@@ -9,18 +9,25 @@ get_header(); ?>
 <section class="u-contenedor">
 
 	<?php while ( have_posts() ) : the_post(); ?>
-	   
+	   	<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>
 	    <article class="Page u-contenido">	
-			
+
 			<!-- Imágen destacada -->
-			<?php if ( has_post_thumbnail() ) : ?>
-				<figure class="Page-featuredImage">
+			<figure class="Post-featuredImage" style="background-image: url('<?php if($url) { echo $url; } else { the_field('destacadaDefault', 'option'); } ?>');">
+				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'large' ); ?>
-				</figure>
-			<?php endif; ?>
-			<!-- Título del artículo -->
-			<h1 class="Page-title"><?php the_title(); ?></h1>
-			<!-- Contenido -->
+				<?php else : ?>
+					<img src="<?php the_field('destacadaDefault'); ?>" alt="">
+				<?php endif; ?>
+
+				<figcaption class="u-contenedor">
+					<!-- Título del artículo -->
+					<h1 class="Post-title"><?php the_title(); ?></h1>
+				</figcaption>
+				<div class="sprite"></div>
+			</figure>
+
+
 			<?php the_content(); ?>	
 			<!-- Compartir en redes sociales -->
 			<?php anliSocialShare(); ?>

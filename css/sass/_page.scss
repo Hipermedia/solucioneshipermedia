@@ -6,18 +6,54 @@
 	width: 100%;
 	vertical-align: top;
 	display: inline-block;
-	margin: 0 0 3rem;
+	margin: 0;
 
 	@media (max-width: $tablet-width ) {
 		width: 100%;
 		padding: 1.5rem;
 	}
 	
-	.Page-featuredImage {
+	.Post-featuredImage {
 		width: 100%;
-		height: 200px;
+		height: 260px;
 		overflow: hidden;
 		margin-bottom: 2.5rem;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		position: relative;
+		background-size: 100%;
+
+		figcaption {
+			position: absolute;
+			margin: 0 auto;
+			right: 0;
+			left: 0;
+			top: 20%;
+			text-align: center;
+
+			h1 {
+				font-weight: 800;
+				font-size: 3rem;
+				color: white;
+			}
+		}
+
+		img {
+			opacity: 0;
+			height: 190px;
+			width: 100%;
+		}
+
+		.sprite {
+			/*background-color: red;*/
+			background-image: url('images/spriteslides.png');
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 70px;
+			display: block;
+			background-position: center -850px;
+		}
 	}
 
 	.Page-titulo {

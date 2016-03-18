@@ -22,34 +22,34 @@
     		<div class="Footer-bloqueRedes">
     			<!-- Facebook -->
     			<?php if (get_field('facebookContacto', 'option') != '') { ?>
-    			    <a href="<?php the_field('facebookContacto', 'option'); ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    			    <a class="fb" href="<?php the_field('facebookContacto', 'option'); ?>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
     			<?php }  ?>
     			<!-- Twitter -->
     			<?php if (get_field('twitterContacto', 'option') != '') { ?>
-    			    <a href="<?php get_field('twitterContacto', 'option'); ?>"title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+    			    <a class="tw" href="<?php the_field('twitterContacto', 'option'); ?>"title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
     			<?php }  ?>
     			<!-- Youtube -->
     			<?php if (get_field('youtubeContacto', 'option') != '') { ?>
-    			    <a href="<?php get_field('youtubeContacto', 'option'); ?>" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+    			    <a class="yt" href="<?php the_field('youtubeContacto', 'option'); ?>" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a>
     			<?php }  ?>
     			<!-- Google Plus -->
     			<?php if (get_field('googleContacto', 'option') != '') { ?>
-    			    <a href="<?php get_field('googleContacto', 'option'); ?>" title="Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
+    			    <a class="gp" href="<?php the_field('googleContacto', 'option'); ?>" title="Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
     			<?php }  ?>
     			<!-- Google Plus -->
-    			<?php if (get_field('googleContacto', 'option') != '') { ?>
-    			    <a href="<?php get_field('googleContacto', 'option'); ?>" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+    			<?php if (get_field('linkedinContacto', 'option') != '') { ?>
+    			    <a class="li" href="<?php the_field('linkedinContacto', 'option'); ?>" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
     			<?php }  ?>
     		</div>
     	</div>
 
     	<div class="Footer-bloque">
     		<ul>
-    			<li>Inicio</li>
-    			<li>Servicios</li>
-    			<li>Portafolio</li>
-    			<li>Contacto</li>
-    			<li>No hacer click aquí</li>
+    			<li><a href="">Inicio</a></li>
+    			<li><a href="">Servicios</a></li>
+    			<li><a href="">Portafolio</a></li>
+    			<li><a href="">Contacto</a></li>
+    			<li><a href="">No hacer click aquí</a></li>
     		</ul>
     	</div>
 

@@ -16,6 +16,7 @@
 	position: relative; // Cambiar de relative a fixed si se quiere integrar el heade ral contenido
 	left: 0;
 	right: 0;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
 	/*overflow: hidden;*/
 	@include transicion();
 	
@@ -29,6 +30,7 @@
 	@media (max-width: $tablet-width) {
 		position: relative;	
 		height: auto;	
+		background: #003B81;
 	}
 
 	&--tiny {
@@ -43,6 +45,10 @@
 
 		&:hover {
 			height: 95px;
+
+			@media (max-width: $tablet-width) {
+				height: auto;
+			}
 		}
 	}
 
@@ -68,11 +74,24 @@
 		border-bottom: 3px solid rgba(0,46,105,.8);
 		@include transicion();
 
+		@media (max-width: $tablet-width) {
+			height: auto;
+			text-align: center;
+		}
+
 		&.tiny {
 			height: 0;
 
+			@media (max-width: $tablet-width) {
+				height: auto;
+			}
+
 			&:hover {
 				height: 40px;
+
+				@media (max-width: $tablet-width) {
+					height: auto;
+				}
 			}
 		}
 
@@ -83,12 +102,22 @@
 				display: inline-block;
 				margin: 0;
 				vertical-align: middle;
-				padding-top: .5rem;
+				/*padding-top: .5rem;*/
+
+				@media (max-width: $smaller-width) {
+					display: block;
+					padding: 0;
+				}
 			}
 
 			.correo, .movil {
 				color: white;
 				padding-right: 3rem;
+				line-height: 40px;
+
+				@media (max-width: $smaller-width) {
+					padding: 0;
+				}
 
 				i {
 					margin-right: .3rem;
@@ -101,16 +130,68 @@
 			}
 
 			.social {
+				padding: 0;
+				overflow: hidden;
+
+				@media (max-width: $tablet-width) {
+					display: inline-block;
+					/*width: 100%;*/
+				}
 
 				a {
 					color: white;
 					border-left: 2px solid rgba(0,46,105,.5);
-					padding: 1rem .5rem;
+					/*padding: 1rem .5rem;*/
 					text-align: center;
+					display: block;
+					float: left;
+					width: 2.5rem;
+					line-height: 40px;
+					@include transicion();
 
 					i {
-						padding-left: .3rem;
+						/*padding-left: .3rem;*/
 					}
+				}
+
+				.fb {
+
+					&:hover {
+						background: #3B579D;
+					}
+
+				}
+
+				.tw {
+
+					&:hover {
+						background: #5EA9DD;
+					}
+
+				}
+
+				.yt {
+
+					&:hover {
+						background: #B62025;
+					}
+
+				}
+
+				.gp {
+
+					&:hover {
+						background: #DC4A38;
+					}
+
+				}
+
+				.li {
+
+					&:hover {
+						background: #0274B3;
+					}
+
 				}
 			}
 		}
@@ -127,6 +208,10 @@
 
 		&.tiny {
 			height: 55px;
+
+			@media (max-width: $tablet-width) {
+				height: auto;
+			}
 		}
 
 		@media (max-width: $desktop-width) {
@@ -160,7 +245,9 @@
 				margin-top: 0;
 			}
 			img {
+				border-radius: 2px;
 				max-width: 320px;
+				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
 				@include transicion();
 
 				@media (max-width: $tablet-width) {

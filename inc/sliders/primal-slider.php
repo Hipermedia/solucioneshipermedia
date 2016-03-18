@@ -4,22 +4,25 @@
 ?>
 
 <section class="PrimalSlider u-contenedorCompleto">
-    <div id="slider-full" class="flexslider PrimalSlider-contenido">
+   <div id="slider-full" class="flexslider PrimalSlider-contenido">
       <ul class="slides">
-          <li class="PrimalSlider-slide">
-            <img class="PrimalSlider-slideImagen" src="<?php echo get_plantilla_url().'/images/bg-slide.jpg'; ?>" alt="" />
-            <div class="PrimalSlider-slideCaption">
-              <div class="PrimalSlider-captionText">
-                <h2 class="PrimalSlider-slideTitulo">Tú haces el diseño</h2>
-                <h2 class="PrimalSlider-slideTitulo">nosotros lo programamos</h2>
-                <p class="PrimalSlider-slideSubtitulo">Proveemos a profesiones del diseño y marketing digital la programación de un web administrable y con las características que necesiten para ofrecer a sus clientes soluciones en web de calidad.</p>
-                <a class="PrimalSlider-slideBoton" href="#">Quiero más información</a>
-             </div>
-              <figure class="PrimalSlider-captionImage">
-                <img src="<?php echo get_plantilla_url().'/images/img-slide.png'; ?>" alt="">
-              </figure>
-            </div>
-          </li>
+         <?php while(have_rows('slider_ce', 'option')) : the_row(); ?>
+            <li>
+               <div class="PrimalSlider-slide u-contenedor" style="background-image: url('<?php the_sub_field('imagen', 'option'); ?>');">
+                  <!-- <img class="PrimalSlider-slideImagen" src="" alt="" /> -->
+                  <div class="PrimalSlider-slideCaption">
+                     <div class="PrimalSlider-captionText">
+                        <h2 class="PrimalSlider-slideTitulo"><?php the_sub_field('titulo', 'option'); ?></h2>
+                        <div class="PrimalSlider-slideSubtitulo"><?php the_sub_field('descripcion', 'option') ?></div>
+                        <a class="PrimalSlider-slideBoton" href="<?php the_sub_field('url', 'option'); ?>"><?php the_sub_field('btn', 'option'); ?></a>
+                     </div>
+                     <figure class="PrimalSlider-captionImage">
+                        <img src="<?php the_sub_field('imagenDec') ?>" alt="">
+                     </figure>
+                  </div>
+               </div>
+            </li>
+         <?php endwhile; ?>
       </ul>
-    </div>
+   </div>
 </section>

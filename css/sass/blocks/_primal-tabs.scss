@@ -3,7 +3,7 @@
 /*------------------------------------------------*/
 
 .PrimalTabs {
-	padding: 2rem 0;
+	padding: 2rem 0 5rem;
 	background: white;
 
 	.PrimalTabs-contenido {
@@ -14,7 +14,7 @@
 			margin-bottom: 3rem;
 			color: #444444;
 			font-size: 3rem;
-			font-weight: bold;
+			font-weight: 800;
 		}
 
 		@media (max-width: $tablet-width) {
@@ -32,6 +32,8 @@
 			@media (max-width: $tablet-width) {
 				position: relative;
 				margin: 0 auto;
+				width: 100%;
+				text-align: center;
 			}
 
 			.PrimalTabs-tabsTitulo {
@@ -43,6 +45,10 @@
 				border-radius: 2px;
 				position: relative;
 				@include transicion();
+
+				@media (max-width: $tablet-width) {
+					margin-bottom: .5rem;
+				}
 
 				&::after {
 					content: "";
@@ -215,13 +221,21 @@
 				.PrimalTabs-panelFigure {
 					width: 49%;
 					display: inline-block;
-					vertical-align: bottom;
+					vertical-align: middle;
 					text-align: center;
+
+					@media (max-width: $tablet-width) {
+						width: 100%;
+					}
 
 					img {
 						width: auto;
 						display: block;
 						margin: 0 auto;
+
+						@media (max-width: $tablet-width) {
+							width: 100%;
+						}
 					}
 
 					figcaption {
@@ -229,6 +243,7 @@
 
 						h2 {
 							font-weight: bold;
+							font-size: 2.25rem;
 						}
 
 						.primer-servicio {
@@ -256,12 +271,17 @@
 				.PrimalTabs-panelContent {
 					width: 50%;
 					display: inline-block;
-					vertical-align: bottom;
+					vertical-align: middle;
 					position: relative;
 					z-index: 0;
+					margin-top: 6rem;
+					font-size: 1.125rem;
 					@media (max-width: $tablet-width) {
 						vertical-align: top;
 						padding-top: 2rem;
+						width: 100%;
+						padding: 0 1rem;
+						margin-top: 1rem;
 					}
 
 					.PrimalTabs-contentHeading {
@@ -269,13 +289,21 @@
 					}
 
 					strong {
-
+						/*margin-bottom: .5rem;*/
 					}
 
 					ul {
+						padding-top: .5rem;
+						padding-left: 0.8rem;
+						list-style: none;
+						padding-bottom: 1.5rem;
 
 						li {
 
+							i {
+								color: #0055A5;
+								margin-right: .3rem;
+							}
 						}
 					}
 

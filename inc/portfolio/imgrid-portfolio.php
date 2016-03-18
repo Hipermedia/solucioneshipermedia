@@ -1,3 +1,4 @@
+<a name="portafolio"></a>
 <section class="Portafolio-contenedor u-contenedorCompleto">
 	
 	<div class="sprite">
@@ -24,7 +25,9 @@
 
 	<div class="imgrid Portafolio" id="imgrid-portfolio">
 		<?php
-		$args = array('cat' => 2, 'posts_per_page' => 6); 
+		$cat = get_field('categoriaPortafolio', 'option');
+		$num = get_field('numeroPortafolio', 'option');
+		$args = array('cat' => $cat, 'posts_per_page' => $num); 
 		$the_query = new WP_Query( $args ); ?>
 		<?php if ( $the_query->have_posts() ) : ?>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -35,13 +38,15 @@
 				$cat1 = $categorias[0]->slug;
 				$cat2 = $categorias[1]->slug;
 			?>
-				<figure class="filter-class Portafolio-block <?php echo $cat1." ".$cat2; ?>">
-				    <img src="<?php echo $url; ?>" alt="<?php the_title(); ?>"/>
-				    <figcaption>
-				        <h2><?php the_title(); ?></h2>
-				        <p class="description"><?php the_excerpt(); ?></p>
-				    </figcaption>
-				</figure>
+				<a href="<?php the_permalink(); ?>">
+					<figure class="filter-class Portafolio-block <?php echo $cat1." ".$cat2; ?>">
+					    <img src="<?php echo $url; ?>" alt="<?php the_title(); ?>"/>
+					    <figcaption>
+					        <h2><?php the_title(); ?></h2>
+					        <p class="description"><?php the_field('subtituloPost') ?></p>
+					    </figcaption>
+					</figure>
+				</a>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		<?php else : ?>

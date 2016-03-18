@@ -17,8 +17,8 @@
 		</div>
 
 		<div class="StarchiQuote-aside">
-			<a class="StarchiQuote-contenidoBtn" href="">Quiero solicitar una demostración</a>
-			<span>o leer un poquito más al respecto</span>
+			<a class="StarchiQuote-contenidoBtn" href="" data-toggle="modal" data-target="#myModal">Quiero solicitar una demostración</a>
+			<a href="">o leer un poquito más al respecto</a>
 		</div>
 	</div>
 
@@ -26,3 +26,21 @@
 		
 	</div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Solicitar una demostración</h4>
+      </div>
+      <div class="modal-body">
+			<?php echo do_shortcode('[contact-form-7 id="190" title="Demostración"]'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

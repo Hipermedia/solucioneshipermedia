@@ -14,169 +14,140 @@
 
 get_header(); ?>
 
-<?php if( have_rows('multiproposito') ): ?>
+<section class="u-contenedorCompleto">
 
-	<?php while ( have_rows('multiproposito') ) : the_row(); ?> 
+	<?php while ( have_posts() ) : the_post(); ?>
+	   	<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>
+	    <article class="Page u-contenido">	
 
-		<?php if( get_row_layout() == 'cover_layout' ): ?>
-			<section class="PrimalCover u-contenedorCompleto" style="background-image: url('<?php the_sub_field('coverImagenFondo'); ?>')">
-				<div class="PrimalCover-contenido u-contenedor">
-					<!-- Títulos y llamadas a la acción -->
-					<div class="PrimalCover-titulos">
-						<h1 class="PrimalCover-titulo"><?php the_sub_field('coverTituloPrincipal'); ?></h1>		
-						<h2 class="PrimalCover-subtitulo"><?php the_sub_field('coverTituloSecundario'); ?></h2>
-						<a href="#" class="PrimalCover-action btn btn-default btn-raised"><?php the_sub_field('coverBoton1'); ?></a>
-						<a href="#" class="PrimalCover-action btn btn-default btn-raised"><?php the_sub_field('coverBoton2'); ?></a>
-					</div>
-					<!-- Imagen principal -->
-					<figure class="PrimalCover-imagen">
-						<img src="<?php the_sub_field('coverImagen'); ?>" alt="Sitio web efectivo SH">
-					</figure>
-				</div>		
-			</section>
-		<?php endif;  ?> 
+			<!-- Imágen destacada -->
+			<figure class="Post-featuredImage" style="background-image: url('<?php if($url) { echo $url; } else { the_field('destacadaDefault', 'option'); } ?>');">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail( 'large' ); ?>
+				<?php else : ?>
+					<img src="<?php the_field('destacadaDefault'); ?>" alt="">
+				<?php endif; ?>
 
-		<?php if( get_row_layout() == 'frase_layout' ): ?>
-			<!-- StarchiBloques -->
-			<section class="StarchiQuote u-contenedor-completo" style="background-image: url('<?php the_sub_field('fraseImagenFondo'); ?>')">
-				<!-- Contenedor -->
-				<div class="StarchiQuote-contenido">
-					<div class="StarchiQuote-texto">
-						<i class="fa fa-quote-right StarchiQuote-textoIcono"></i>
-						<h2 class="StarchiQuote-textoCita"><?php the_sub_field('fraseFrase') ?></h2>
-					</div>
-				</div>
-			</section>
-		<?php endif;  ?> 
+				<figcaption class="u-contenedor">
+					<!-- Título del artículo -->
+					<h1 class="Post-title"><?php the_title(); ?></h1>
+				</figcaption>
+				<div class="sprite"></div>
+			</figure>
 
-		<?php if( get_row_layout() == 'galeria_layout' ): ?>
-			<section class="u-contenedor">
-				<div class="imgrid" id="imgrid-portfolio">
-					<?php while(have_rows('galeriaGaleria')) : the_row(); ?>
-						<figure class="filter-class group1">
-						    <img src="<?php the_sub_field('imagen') ?>" alt="img01"/>
-						    <figcaption>
-						        <h2><?php the_sub_field('titulo'); ?></h2>
-						        <p class="description"><?php the_sub_field('descripcion'); ?></p>
-						    </figcaption>
-						</figure>
-					<?php endwhile; ?>
-				</div>
-			</section>
-		<?php endif;  ?>
+			<div class="u-contenedor contenido-wp-multiproposito">
+				<?php the_content(); ?>	
+			</div>
 
-		<?php if( get_row_layout() == 'texto_layout' ): ?>
-			<!-- PrimalBloques -->
-			<section class="PrimalText">
-				<!-- Contenedor -->
-				<div class="PrimalText-contenido u-contenedor">
-					<!-- Texto wysiwyg -->
-					<div class="PrimalText-texto">
-						<?php the_sub_field('textoTexto'); ?>
-					</div>		
-				</div>
-			</section>
-		<?php endif;  ?>
-
-		<?php if( get_row_layout() == 'testimonios_layout' ): ?>
-		<!-- PrimalBloques -->
-			<section class="PrimalTestimony">
-				<!-- Contenedor -->
-				<div class="PrimalTestimony-contenido u-contenedor">
-					
-					<?php if( have_rows('testimoniosTestimonios') ): ?>
-						<?php while( have_rows('testimoniosTestimonios') ): the_row(); ?>
-							<!-- bloque -->
-							<div class="PrimalTestimony-block">
-								<figure class="PrimalTestimony-blockFigure">
-									<i class="fa fa-quote-left"></i>
-								</figure>
-								<blockquote class="PrimalTestimony-blockCita">
-									<?php the_sub_field('cita'); ?>
-								</blockquote>
-								<h4 class="PrimalTestimony-blockAuthor">
-									<?php the_sub_field('autor'); ?>
-									<span class="PrimalTestimony-blockMeta">
-										<?php the_sub_field('descripcionAutor'); ?>
-									</span>
-								</h4>
+			<?php if( have_rows('multiproposito') ): ?>
+				<?php while ( have_rows('multiproposito') ) : the_row(); ?> 
+					<?php if( get_row_layout() == 'caracteristicas_layout' ): ?>
+						<section class="Portafolio-contenedor u-contenedorCompleto">
+							<div class="sprite"></div>
+							<div class="Portafolio-heading u-contenedor">
+								<h2><span><?php the_sub_field('titulo'); ?></span></h2>
+								<p><?php the_sub_field('subtitulo'); ?></p>
 							</div>
-						<?php endwhile; ?>
-					<?php endif; ?>
-				</div>
-			</section>
-		<?php endif;  ?>
+							<div class="imgrid Caracteristicas Portafolio u-contenedor" id="">
+								<?php while(have_rows('bloques')): the_row(); ?>
+									<div class="Caracteristicas-bloque">
+										<div class="principal">
+											<img src="<?php the_sub_field('icono'); ?>" alt="">
+											<div class="secundario-1"></div>
+											<div class="secundario-2"></div>
+										</div>
+										<div class="texto">
+											<h2><?php the_sub_field('titulo'); ?></h2>
+											<p><?php the_sub_field('subtitulo'); ?></p>
+										</div>
+									</div>
+								<?php endwhile; ?>
+							</div>
+							<div class="sprite-2"></div>
+						</section>
+					<?php endif;  ?>
 
-		<?php if( get_row_layout() == 'galeriaSlider_layout' ): ?>
-			<section class="GallerySlider u-contenedor"> 
-			  <div id="slider-gallery" class="flexslider">
-			      <ul class="slides">
-			      	<?php while(have_rows('galeriaSlider')) : the_row(); ?>
-			          	<li class="GallerySlider-slide">
-			          	  <a class="GallerySlider-slideImage" href="" rel="lightbox">
-			          	    <img src="<?php the_sub_field('imagen'); ?>" alt="">
-			          	    <span class="bg-aux">
-			          	      <i class="fa fa-search-plus"></i>
-			          	    </span>
-			          	  </a>
-			          	  <div class="GallerySlider-slideCaption">
-			          	  	<?php the_sub_field('texto'); ?>
-			          	  </div>
-			          	</li>
-			        <?php endwhile; ?>
-			      </ul>
-			  </div>
-			  <div id="slider-gallery-thumbnav" class="flexslider carousel">
-			      <ul class="slides">
-			      	<?php while(have_rows('galeriaSlider')) : the_row(); ?>
-			          <li class="GallerySlider-slide">
-			            <img src="<?php the_sub_field('imagen'); ?>" alt="">
-			          </li>
-			          <?php endwhile; ?>
-			      </ul>
-			  </div>
-			</section>
-		<?php endif;  ?>
+					<?php if( get_row_layout() == 'testimonios_layout' ): ?>
+						<!-- PrimalBloques -->
+						<section class="PrimalTestimony">
+							<!-- Contenedor -->
+							<div class="PrimalTestimony-contenido u-contenedor">
+								<!-- Títulos de la sección -->
+								<h1 class="PrimalTestimony-titulo"><?php the_sub_field('titulo'); ?></h1>
+								<h2 class="PrimalTestimony-subtitulo"><?php the_sub_field('subtitulo'); ?></h2>
+								<!-- bloque -->
+								<div class="flexslider" id="testimonios-slider">
+								  	<ul class="slides">
+								  		<?php while(have_rows('testimonios')) : the_row(); ?>
+								  			<li class="PrimalTestimony-block">
+								  				<blockquote class="PrimalTestimony-blockCita">
+								  					<?php the_sub_field('cita'); ?>
+								  				</blockquote>
+								  				<div class="PrimalTestimony-blockAuthor">
+								  					<h4 class="PrimalTestimony-blockAuthor-name"><?php the_sub_field('autor'); ?></h4>
+								  					<i class="fa fa-quote-left"></i>
+								  					<p class="PrimalTestimony-blockMeta"><?php the_sub_field('descripcion'); ?></p>
+								  				</div>
+								  				<figure class="PrimalTestimony-blockFigure">
+								  					<img src="<?php the_sub_field('foto'); ?>" alt="">
+								  				</figure>
+								  			</li>
+								  		<?php endwhile; ?>
+								  	</ul>
+								</div>
+							</div>
+						</section>
+					<?php endif;  ?>  
 
-		<?php if( get_row_layout() == 'contacto_layout' ): ?>
-			<section class="MeteoroContact u-contenedor-completo">
-			    <div class="MeteoroContact-mapa"> 
-			    	<?php the_sub_field('contactoMapa'); ?>
-			    </div>  
-			    
-			    <div class="MeteoroContact-contenido u-contenedor">
-			        <div class="MeteoroContact-formulario">
-			            <?php echo do_shortcode(get_sub_field('contactoFormulario')); ?>
-			        </div>  
-			        
-			        <div class="MeteoroContact-datos">
-			            <h2>meteoroContact</h2>
-			            <p><i class="fa fa-map-marker"></i><?php the_sub_field('contactoDireccion'); ?></p>
-			            <p><i class="fa fa-mobile"></i><?php the_sub_field('contactoCelular'); ?></p>
-			            <p><i class="fa fa-phone"></i><?php the_sub_field('contactoTelefono'); ?></p>
-			            <p><i class="fa fa-envelope"></i><?php the_sub_field('contactoCorreo'); ?></p>
-			        </div>
-			    </div>
-			</section>
-		<?php endif;  ?>
+					<?php if( get_row_layout() == 'calltoaction_layout' ): ?>
+						<section class="StarchiQuote u-contenedorCompleto">
+							<div class="sprite"></div>
+							<!-- Contenedor -->
+							<div class="StarchiQuote-contenido u-contenedor">
+								<div class="StarchiQuote-texto">
+									<h2 class="StarchiQuote-textoCita"><?php the_sub_field('titulo'); ?></h2>
+									<p><?php the_sub_field('subtitulo'); ?></p>
+								</div>
+								<div class="StarchiQuote-aside">
+									<a class="StarchiQuote-contenidoBtn" href="" data-toggle="modal" data-target="#myModal"><?php the_sub_field('boton') ?></a>
+									<a href=""><?php the_sub_field('texto'); ?></a>
+								</div>
+							</div>
+							<div class="sprite-2"></div>
+						</section>
 
-		<?php if( get_row_layout() == 'pricing_layout' ): ?>
-		<section class="PrimalPricing u-contenedor">
-			<div class="PrimalPricing-contenido">
-				<?php while(have_rows('pricingPricing')) : the_row(); ?>
-				<article class="PrimalPricing-servicio">
-					<h2 class="PrimalPricing-servicioNombre"><?php the_sub_field('nombre'); ?></h2>
-					<h3 class="PrimalPricing-servicioPrecio"><?php the_sub_field('precio'); ?></h3>
-					<?php while(have_rows('caracteristicas')) : the_row(); ?>
-						<div class="PrimalPricing-servicioCaracteristica"><?php the_sub_field('caracteristica'); ?></div>
-					<?php endwhile; ?>
-					<div class="PrimalPricing-servicioDescripcion"><?php the_sub_field('descripcion'); ?></div>
-					<a href="" class="PrimalPricing-servicioBoton"><?php the_sub_field('boton'); ?></a>
-				</article>	
-				<?php endwhile; ?>		
-			</div>	
-		</section>
-		<?php endif;  ?>
-	<?php endwhile;  ?>
-<?php endif;  ?> 
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  	<div class="modal-dialog" role="document">
+						    	<div class="modal-content">
+						      		<div class="modal-header">
+						        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        		<h4 class="modal-title" id="myModalLabel">Solicitar una demostración</h4>
+						      		</div>
+						      		<div class="modal-body">
+										<?php echo do_shortcode('[contact-form-7 id="190" title="Demostración"]'); ?>
+						      		</div>
+						      		<div class="modal-footer">
+						        		<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						      		</div>
+						    	</div>
+						  	</div>
+						</div>
+
+					<?php endif;  ?>  
+
+				<?php endwhile;  ?>
+			<?php endif;  ?> 
+
+			<?php anliSocialShare(); ?>
+	   
+		</article>
+	<?php endwhile; // end of the loop. ?>
+
+</section>
+
 <?php get_footer(); ?>
+
+
+
+

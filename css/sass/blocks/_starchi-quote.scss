@@ -3,11 +3,12 @@
 /*------------------------------------------------*/
 
 .StarchiQuote {
-	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-image: url('images/videochat.jpg');
 	position: relative;
+	background-position: bottom;
+	background-color: #032B5E;
 	/*opacity: .8;*/
 	/*height: 35vh;*/
 	/*background: #012351;*/
@@ -20,7 +21,7 @@
 		background-image: url('images/spriteslides.png');
 		background-repeat: no-repeat;
 		width: 100%;
-		height: 73px;
+		height: 90px;
 		display: block;
 		background-position: center -295px;
 	}
@@ -29,7 +30,7 @@
 		background-image: url('images/spriteslides.png');
 		background-repeat: no-repeat;
 		width: 100%;
-		height: 73px;
+		height: 87px;
 		display: block;
 		background-position: center -385px;
 	}
@@ -52,6 +53,11 @@
 			padding: 3rem 0;
 			display: inline-block;
 			color: white;
+
+			@media (max-width: $tablet-width) {
+				width: 100%;
+			}
+
 			@media (max-width: $smaller-width) {
 				padding: 0;
 			}
@@ -81,6 +87,10 @@
 			width: 58%;
 			display: inline-block;
 			text-align: center;
+
+			@media (max-width: $tablet-width) {
+				width: 90%;
+			}
 
 			.StarchiQuote-contenidoBtn {
 				padding: .85rem 1.8rem;
@@ -123,51 +133,88 @@
 }
 
 .Newsletter {
-	background-position: center;
+	background-position: bottom;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-image: url('images/newsletter.jpg');
+	background-color: #010D1D;
+	
 
 	.sprite {
 		background-image: url('images/spriteslides.png');
 		background-repeat: no-repeat;
 		width: 100%;
-		height: 73px;
+		height: 90px;
 		display: block;
-		background-position: center -492px;
+		background-position: center -475px;
 	}
 
 	.sprite-2 {
 		background-image: url('images/spriteslides.png');
 		background-repeat: no-repeat;
 		width: 100%;
-		height: 82px;
+		height: 91px;
 		display: block;
-		background-position: center -574px;
+		background-position: center -565px;
+	}
+
+	.input {
+		position: relative;
+
+		input {
+			/*width: 100% !important;*/
+		}
+
+		i {
+			position: absolute;
+			z-index: 1;
+			font-size: 1.8rem;
+			right: 7rem;
+			top: .3rem;
+			color: #999999;
+
+			@media (max-width: $tablet-width) {
+				right: 1.5rem;
+			}
+		}
 	}
 
 	.Newsletter-texto {
+		width: 550px !important;
+
+		@media (max-width: $tablet-width) {
+			width: 100% !important;
+			padding: 0 1rem !important;
+			text-align: center;
+		}
 
 		h2 {
 			font-weight: bold !important;
 			color: #FDA82F;
-			font-size: 2rem !important;
+			font-size: 2.25rem !important;
 
 			strong {
 				color: white;
-				font-size: 2.5rem !important;
+				font-size: 3rem !important;
 			}
 		}
 
 		p {
-
+			font-size: 1.5rem;
 		}
 	}
 
 	.Newsletter-aside {
+		width: 48% !important;
+
+		@media (max-width: $tablet-width) {
+			width: 100% !important;
+			padding: 0 1rem !important;
+			text-align: center;
+		}
 
 		.correo {
-			width: 50%;
+			width: 66%;
 			margin-bottom: 1rem;
 			background: #EEEEEE;
 			border-radius: 2px;
@@ -175,7 +222,10 @@
 			-webkit-box-shadow: inset 0px 3px 5px 0px rgba(112, 112, 112, 0.75);
 			-moz-box-shadow:    inset 0px 3px 5px 0px rgba(112, 112, 112, 0.75);
 			box-shadow:         inset 0px 3px 5px 0px rgba(112, 112, 112, 0.75);
-			border: none;
+
+			@media (max-width: $tablet-width) {
+				width: 100% !important;
+			}
 		}
 
 		.StarchiQuote-contenidoBtn {

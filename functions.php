@@ -322,7 +322,7 @@ endif; // shbase_setup
  * function tied to the excerpt_length filter hook.
  */
 function shbase_excerpt_length( $length ) {
-	return 40;
+	return 20;
 }
 add_filter( 'excerpt_length', 'shbase_excerpt_length' );
 

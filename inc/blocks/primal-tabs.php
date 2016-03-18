@@ -1,6 +1,7 @@
 <?php 
 
 ?>
+<a name="servicios"></a>
 <section class="PrimalTabs u-contenedorCompleto">
 	<div class="PrimalTabs-contenido u-contenedor">
 		<h2 class="PrimalTabs-cotenidoTitulo">Servicios</h2>
@@ -38,10 +39,10 @@
 					<strong>Incluye: </strong>
 
 					<ul>
-						<li>Hospedaje, dominio y cuentas de correo</li>
-						<li>Versión responsive a distintos tamaños de pantallas</li>
-						<li>Capacitación sobre el gestor de contenido</li>
-						<li>Soporte técnico a ti o a tu cliente en tu nombre</li>
+						<li><i class="fa fa-check"></i>Hospedaje, dominio y cuentas de correo</li>
+						<li><i class="fa fa-check"></i>Versión responsive a distintos tamaños de pantallas</li>
+						<li><i class="fa fa-check"></i>Capacitación sobre el gestor de contenido</li>
+						<li><i class="fa fa-check"></i>Soporte técnico a ti o a tu cliente en tu nombre</li>
 					</ul>
 					<a href="" class="PrimalTabs-contentBtn primer-servicio">Me interesa, dime más</a>
 				</div>
@@ -60,10 +61,10 @@
 					</p>
 					<strong>Características:</strong>
 					<ul>
-						<li>Ideal para quien ofrece servicios además de productos</li>
-						<li>Acepta pagos con tarjeta de crédito y en parcialidades</li>
-						<li>Da seguimiento al proceso de compra por depósito</li>
-						<li>Compatible con dispositivos móviles</li>
+						<li><i class="fa fa-check"></i>Ideal para quien ofrece servicios además de productos</li>
+						<li><i class="fa fa-check"></i>Acepta pagos con tarjeta de crédito y en parcialidades</li>
+						<li><i class="fa fa-check"></i>Da seguimiento al proceso de compra por depósito</li>
+						<li><i class="fa fa-check"></i>Compatible con dispositivos móviles</li>
 					</ul>
 					<a href="" class="PrimalTabs-contentBtn segundo-servicio">Quiero ver una demostración</a>
 					
@@ -83,10 +84,10 @@
 					</p>
 					<strong>Te enseñamos:</strong>
 					<ul>
-						<li>Optimización para buscadores; SEO y SEM</li>
-						<li>Email marketing</li>
-						<li>Marketing en redes sociales</li>
-						<li>Analítica</li>
+						<li><i class="fa fa-check"></i>Optimización para buscadores; SEO y SEM</li>
+						<li><i class="fa fa-check"></i>Email marketing</li>
+						<li><i class="fa fa-check"></i>Marketing en redes sociales</li>
+						<li><i class="fa fa-check"></i>Analítica</li>
 					</ul>
 					<a href="" class="PrimalTabs-contentBtn tercer-servicio">Necesito más información</a>
 					
@@ -106,10 +107,10 @@
 					</p>
 					<strong>Incluye:</strong>
 					<ul>
-						<li>Hospedaje, dominio y cuentas de correo</li>
-						<li>Se adapta a las pantallas de dispositivos móviles</li>
-						<li>Capacitación y soporte técnico</li>
-						<li>Permite administrar el contenido muy fácil</li>
+						<li><i class="fa fa-check"></i>Hospedaje, dominio y cuentas de correo</li>
+						<li><i class="fa fa-check"></i>Se adapta a las pantallas de dispositivos móviles</li>
+						<li><i class="fa fa-check"></i>Capacitación y soporte técnico</li>
+						<li><i class="fa fa-check"></i>Permite administrar el contenido muy fácil</li>
 					</ul>
 					<a href="" class="PrimalTabs-contentBtn cuarto-servicio">Suena bien, dime más</a>
 					
@@ -129,10 +130,10 @@
 		    		</p>
 		    		<strong>Incluye:</strong>
 		    		<ul>
-		    			<li>Hospedaje, dominio y cuentas de correo</li>
-		    			<li>Se adapta a las pantallas de dispositivos móviles</li>
-		    			<li>Capacitación y soporte técnico</li>
-		    			<li>Permite administrar el contenido muy fácil</li>
+		    			<li><i class="fa fa-check"></i>Hospedaje, dominio y cuentas de correo</li>
+		    			<li><i class="fa fa-check"></i>Se adapta a las pantallas de dispositivos móviles</li>
+		    			<li><i class="fa fa-check"></i>Capacitación y soporte técnico</li>
+		    			<li><i class="fa fa-check"></i>Permite administrar el contenido muy fácil</li>
 		    		</ul>
 		    		<a href="" class="PrimalTabs-contentBtn quinto-servicio">Suena bien, dime más</a>
 		    	</div>

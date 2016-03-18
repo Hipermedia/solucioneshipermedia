@@ -45,8 +45,39 @@
 					</div>
 					<!-- <a href="" class="PrimalBlocks-blockAction">Leer más</a> -->
 					<div class="PrimalBlocks-blockCategorias">
+
 						<p class="titulo">Categorías</p>
-						<p class="categorias">Diseño, SEO, Marketing digital</p>
+
+						<p class="categorias">
+
+							<?php
+							$categorias = get_the_category();
+							$size = sizeof($categorias);
+							$cuentita = 0;
+
+							foreach( $categorias as $category) {
+
+								$cuentita++;
+
+								$padre = $category->category_parent;
+
+								if ($padre!=0) {
+							?>
+									<a href="<?php echo home_url(); ?>/category/<?php echo $category->slug; ?>">
+							<?php  
+							    	echo $category->cat_name;
+								}
+
+								if ( $cuentita < $size && $cuentita > 1 ) {
+									echo ",";
+								}
+							?>
+									</a>
+							<?php
+							
+							}
+							?>
+						</p>
 					</div>
 				</div>
 			<?php endwhile; ?>

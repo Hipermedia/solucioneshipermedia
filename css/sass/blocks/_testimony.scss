@@ -15,7 +15,7 @@
 		.PrimalTestimony-titulo {
 			color: #012D62;
 			text-align: center;
-			font-weight: bold;
+			font-weight: 800;
 			font-size: 3rem;
 		}
 
@@ -23,22 +23,49 @@
 			margin: 0 0 3rem;
 			text-align: center;
 			color: #444444;
-			font-size: 1.2rem;
+			font-size: 1.125rem;
 			/*font-weight: bold;*/
 		}
 
+		#testimonios-slider {
+			background: none;
+			border: none;
+
+			.flex-control-nav {
+
+				li {
+
+					.flex-active {
+						background: #797979;
+					}
+
+					a {
+						background: white;
+						width: 15px;
+						height: 15px;
+						-webkit-box-shadow: inset 0px 2px 8px 2px rgba(50, 50, 50, 0.5);
+						-moz-box-shadow:    inset 0px 2px 8px 2px rgba(50, 50, 50, 0.5);
+						box-shadow:         inset 0px 2px 8px 2px rgba(50, 50, 50, 0.5);
+					}
+				}
+			}
+		}
+
 		.PrimalTestimony-block {
-			display: inline-block;
+			/*display: inline-block;*/
 			vertical-align: top;
-			width: 30%;
-			margin: 0 1.5% 3rem;	
+			/*width: 30%;*/
+			/*margin: 0 1.5% 3rem;	*/
 			position: relative;
 			background: white;
 			border-radius: 3px;
 			padding: 0 1rem;
+			/*margin: 0 .1%;*/
 			-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.6);
 			-moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.6);
 			box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.6);
+			margin: 0 19px;
+			width: 330px !important;
 			
 			// Responsive
 			@media (max-width: $tablet-width) {
@@ -65,11 +92,6 @@
 				line-height: 1.15;
 				float: left;
 				width: 70%;
-				/*padding: .5rem 1rem;*/
-/*
-				&:before {
-					content: '—';
-				}*/
 
 				.PrimalTestimony-blockAuthor-name {
 					text-align: right;

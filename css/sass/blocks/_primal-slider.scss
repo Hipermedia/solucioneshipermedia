@@ -7,14 +7,16 @@
 
 		.PrimalSlider-slide {
 			position: relative;
+			background-position: center bottom;
+			background-size: 100%;
+			background-attachment: fixed;
 
 			.PrimalSlider-slideImagen {
-				width: auto;
+				/*width: auto;*/
 			}
 
 			.PrimalSlider-slideCaption {
 				color: white;
-				position: absolute;
 				width: $desktop-width;
 				bottom: 0;
 				right: 0;
@@ -23,9 +25,15 @@
 				@media (max-width: $desktop-width) {
 					padding-bottom: 3rem;
 				}
+
+				@media (max-width: $tablet-width) {
+					width: auto;
+				}
+
 				@media (max-width: $smaller-width) {
 					padding: 0;
 					height: 100%;
+					bottom: 0rem;
 				}
 
 				.PrimalSlider-captionText {
@@ -34,11 +42,20 @@
 					vertical-align: middle;
 					position: relative;
 					z-index: 0;
+					
+					@media (max-width: $tablet-width) {
+						text-align: center;
+						display: block;
+						margin: 0 auto;
+						width: 96%;
+					}
+
 
 					.PrimalSlider-slideTitulo {
+						font-size: 2.625rem;
 						text-shadow: 1px 2px #000;
 						margin: .3rem 0;
-						font-size: 2.5rem;
+						font-weight: 600;
 						@media (max-width: $desktop-width) {
 							font-size: 3rem;
 						}
@@ -50,6 +67,7 @@
 					.PrimalSlider-slideSubtitulo {
 						margin: 1.5rem 0;
 						padding: 0;
+						font-size: 1.125rem;
 						@media (max-width: $desktop-width) {
 							font-size: 1.5rem;
 						}
@@ -91,6 +109,10 @@
 					display: inline-block;
 					width: 49%;
 					vertical-align: middle;
+
+					@media (max-width: $tablet-width) {
+						display: none;
+					}
 
 					img {
 						width: auto;

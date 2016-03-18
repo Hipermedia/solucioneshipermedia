@@ -33,7 +33,21 @@ jQuery(document).ready(function($) {
 	var url = window.location.href;
 	$('a[href="'+url+'"]').addClass('active');
 
-
+  // función para desplazamiento lento en enlaces dentro del mismo documento
+  $(function(){
+    $('a[href*=#]').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var $target = $(this.hash);
+          $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+          if ($target.length) {
+            var targetOffset = $target.offset().top;
+            $('html,body').animate({scrollTop: targetOffset}, 1000);
+            return false;
+          }
+        }
+    });
+   }); //fin
+  
 	//Agrega una animación al hacer scroll al llegar a un elemento gracias a waypoints
 
 	$('.titulo').waypoint(function(direction) {
@@ -45,7 +59,8 @@ jQuery(document).ready(function($) {
 	//Invocamos a los sliders en modo de ataque
 	// [Slider full]
   	$('#slider-full').flexslider({
-  	  animation: "slide"
+  	  animation: "slide",
+      controlNav: false
   	});
 
   	// [Slider galería]
@@ -113,6 +128,7 @@ jQuery(document).ready(function($) {
     // imgrid customization
 
     $("#imgrid-portfolio").imgrid({
+      gridLayout: 'square',
       thumbSize: 300,
       thumbHoverEffect: "ming",
       thumbLightbox: false
@@ -143,6 +159,15 @@ jQuery(document).ready(function($) {
     });
 
     $("#unfilter-button").addClass('active');
+
+    $('#testimonios-slider').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      itemWidth: 300,
+      itemMargin: 10,
+      directionNav: false,
+      slideshow: true
+    });
 
     $(function() {
       var menues = $("#filters li h3"); 

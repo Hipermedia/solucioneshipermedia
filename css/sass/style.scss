@@ -106,7 +106,16 @@ Text Domain: shbase
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	padding: 3rem 0 0;
+	padding: 0rem 0 0;
+
+	.sprite {
+		background-image: url('images/spriteslides.png');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 91px;
+		display: block;
+		background-position: center -656px;
+	}
 
 	.sprite-2 {
 		background-image: url('images/spriteslides.png');
@@ -118,31 +127,59 @@ Text Domain: shbase
 	}
 
 	.Contacto-titulo {
+		padding-top: 2rem;
 		text-align: center;
 		font-size: 3rem;
-		font-weight: bold;
+		font-weight: 800;
 		line-height: 1;
 		color: #012D62;
+		text-shadow: 0px 1px 2px rgba(150, 150, 150, 1);
 	}
 
 	.Contacto-subtitulo {
 		color: #414141;
-		font-size: 1.2rem;
+		font-size: 1.125rem;
 		text-align: center;
 	}
 
 	.Contacto-formulario {
 		padding-top: 2rem;
+		padding-bottom: 3rem;
 		
 		.wpcf7 {
+			position: relative;
+			z-index: 0;
+
+			.aux {
+				overflow: hidden;
+			}
 
 			.nombre, .email, .whats {
 				float: left;
 				width: 30%;
+				position: relative;
+
+				@media (max-width: $tablet-width) {
+					width: 96%;
+					display: block;
+					float: none;
+					margin: 0 auto 1rem;
+				}
+
+				i {
+					position: absolute;
+					z-index: 1;
+					bottom: 10px;
+					/*right: 0;*/
+					left: 13px;
+					font-size: 1.5rem;
+					color: #999999;
+				}
 
 				input {
+					padding-left: 2rem;
 					border: none;
-					border-radius: 0;
+					border-radius: 2px;
 					background: #EEEEEE;
 					-webkit-box-shadow: inset 0px 2px 5px 0px rgba(50, 50, 50, 0.5);
 					-moz-box-shadow:    inset 0px 2px 5px 0px rgba(50, 50, 50, 0.5);
@@ -152,13 +189,34 @@ Text Domain: shbase
 
 			.email {
 				margin: 0 5%;
+
+				@media (max-width: $tablet-width) {
+					margin: 0 auto 1rem;
+				}
 			}
 
 			.mensaje {
+				position: relative;
+
+				@media (max-width: $tablet-width) {
+					width: 96%;
+					margin: 0 auto;
+				}
+
+				i {
+					position: absolute;
+					z-index: 1;
+					top: 10px;
+					/*right: 0;*/
+					left: 13px;
+					font-size: 1.5rem;
+					color: #999999;
+				}
 
 				textarea {
+					padding-left: 2rem;
 					border: none;
-					border-radius: 0;
+					border-radius: 2px;
 					background: #EEEEEE;
 					-webkit-box-shadow: inset 0px 2px 5px 0px rgba(50, 50, 50, 0.5);
 					-moz-box-shadow:    inset 0px 2px 5px 0px rgba(50, 50, 50, 0.5);
@@ -167,11 +225,128 @@ Text Domain: shbase
 			}
 
 			.enviar {
+				position: relative;
+				z-index: 0;
 
 				input {
 					background: #F37A1F;
+					position: relative;
+					border-bottom: 4px solid #B25416;
+					@include transicion ();
+
+					&::after {
+/*						content: "";
+						height: 6px;
+						width: 100%;
+						display: block;
+						background: #B25416; 
+						position: absolute;
+						bottom: -4px;
+						z-index: -1;
+						border-bottom-right-radius: 2px;
+						border-bottom-left-radius: 2px;*/
+					}
 				}
 			}
 		}
 	}
+}
+
+.bg-white {
+	background: white;
+}
+
+
+.Caracteristicas {
+	text-align: center;
+	padding-top: 3rem;
+
+	.Caracteristicas-bloque {
+		display: inline-block;
+		width: 271px;
+		margin-bottom: 4rem;
+		vertical-align: top;
+
+		&:hover {
+
+			.principal {
+				background: #FDA82F;
+
+				.secundario-1 {
+					left: 0px;
+					bottom: 0px;
+				}
+
+				.secundario-2 {
+					right: 0px;
+					top: 0px;
+				}
+			}
+		}
+
+		.principal {
+			width: 150px;
+			height: 150px;
+			display: block;
+			margin: 0 auto;
+			background: #EEEEEE;
+			position: relative;
+			cursor: pointer;
+			-ms-transform: rotate(45deg); /* IE 9 */
+			-webkit-transform: rotate(45deg); /* Safari */
+			transform: rotate(45deg);
+
+			@include transicion();
+
+			img {
+				width: auto;
+				display: block;
+				margin: 0 auto;
+				left: 0;
+				right: 0;
+				top: 15%;
+				width: 70%;
+				position: absolute;
+				-ms-transform: rotate(-45deg); /* IE 9 */
+				-webkit-transform: rotate(-45deg); /* Safari */
+				transform: rotate(-45deg);
+			}
+
+			.secundario-1, .secundario-2 {
+				width: 165px;
+				height: 165px;
+				display: block;
+				border: 1px solid #EEEEEE;
+				position: absolute;
+				@include transicion();
+			}
+
+			.secundario-1 {
+				left: -15px;
+				bottom: -15px;
+			}
+
+			.secundario-2 {
+				right: -15px;
+				top: -15px;
+			}
+		}
+		
+		.texto {
+			padding: 2rem 1.5rem 0;
+
+			h2 {
+				font-weight: bold;
+				color: #FDA82F;
+			}
+
+			p {
+				color: #EEEEEE;
+			}
+		}
+	}
+}
+
+.contenido-wp-multiproposito {
+	padding-bottom: 3rem;
 }

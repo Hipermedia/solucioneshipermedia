@@ -42,7 +42,10 @@ get_header(); ?>
 			</div>
 
 			<div class="StarchiQuote-aside Newsletter-aside">
-				<input class="correo" type="text" placeholder="Introduce tu correo">
+				<div class="input">
+					<input class="correo" type="text" placeholder="Introduce tu correo">
+					<i class="fa fa-paper-plane"></i>
+				</div>
 				<a class="StarchiQuote-contenidoBtn" href="">Me quiero suscribir</a>
 			</div>
 		</div>
@@ -54,6 +57,7 @@ get_header(); ?>
 
 	<?php filmstripSlider(); ?>
 	
+	<a name="contacto"></a>
 	<section class="Contacto">
 
 		<div class="sprite">

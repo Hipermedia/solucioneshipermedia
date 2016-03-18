@@ -22,17 +22,35 @@
 		display: block;
 		top: 0;
 		padding-bottom: 1.5rem;
+		margin: 0;
 	}
 	
 	/* Clase que se le agrega al nav cuando se hace scroll */
 	&.tiny { 
 	  /*top: .5rem;*/
 	  margin: 0;
+
+	  ul {
+
+	  	li {
+
+	  		a {
+	  			color: white;
+	  			padding: 0px .8em .5rem;
+	  		}
+	  	}
+
+	  	.current-menu-item {
+
+	  		a {
+	  			color: #F3A738;
+	  		}
+	  	}
+	  }
 		
 		@media (max-width: $tablet-width) {
 			top: 0;
 		}
-
 
 	  a { color: $main-color; /*background: $main-color-text;*/ }
 	  a:hover { color: $main-color-text; /*background: $main-color;*/ }
@@ -89,6 +107,7 @@
 	}
 	a:hover,
 	a:focus {
+		color: #F3A738;
 		/*background: $nav-bg-text-color-hover; */
 		/* Show a solid color for older browsers */
 		/*color: $nav-text-color-hover;*/
@@ -120,5 +139,13 @@
         text-decoration:none;
 		background: #ccc;
         color: #444;
+    }
+
+    .current-menu-item {
+
+    	a {
+    		color: #F3A738;
+			border-bottom: 3px solid #FFA91A;
+    	}
     }
 }

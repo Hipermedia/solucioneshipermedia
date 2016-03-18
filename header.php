@@ -59,7 +59,7 @@
 
     <div id="Header-contenidoBefore" class="Header-contenidoBefore">
         <div class="u-contenedor">
-            <a class="correo" href=""><i class="fa fa-envelope"></i><?php the_field('correoContacto', 'option'); ?></a>
+            <p class="correo"><i class="fa fa-envelope"></i><?php the_field('correoContacto', 'option'); ?></p>
             <p class="movil"><i class="fa fa-mobile"></i><i class="fa fa-whatsapp"></i><?php the_field('movilContacto', 'option'); ?></p>
             <!-- Redes sociales -->
             <?php primalSocialShare(); ?>
@@ -80,4 +80,4 @@
     </section>
 </header>
 
-<main class="main">
+<main class="main <?php if(!is_home()) { echo "bg-white"; } ?>">

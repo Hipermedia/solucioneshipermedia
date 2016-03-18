@@ -20,6 +20,8 @@
 	.Footer-bloque {
 		float: left;
 		width: 33%;
+		font-size: 1.125rem;
+
 
 		@media (max-width: $tablet-width) {
 			width: 100%;
@@ -32,13 +34,22 @@
 
 		.Footer-bloqueLogo {
 
+			@media (max-width: $tablet-width) {
+				padding: 0 1rem 1rem;
+			}
+
 			img {
 				width: auto;
+
+				@media (max-width: $tablet-width) {
+					width: 100%;
+				}
 			}
 		}
 
 		.Footer-bloqueContacto {
 			padding-bottom: .5rem;
+			font-size: 1.125rem;
 
 			i {
 				margin-right: .5rem;
@@ -46,11 +57,19 @@
 		}
 
 		.Footer-bloqueRedes {
+			overflow: hidden;
+			display: inline-block;
 
 			a {
 				color: white;
 				border-right: 2px solid #844120;
-				padding: 0 .5rem;
+				/*padding: 0 .5rem;*/
+				display: block;
+				float: left;
+				text-align: center;
+				width: 2.5rem;
+				line-height: 30px;
+				@include transicion();
 
 				&:last-child {
 					border: none;
@@ -60,6 +79,46 @@
 
 				}
 			}
+
+			.fb {
+
+				&:hover {
+					background: #3B579D;
+				}
+
+			}
+
+			.tw {
+
+				&:hover {
+					background: #5EA9DD;
+				}
+
+			}
+
+			.yt {
+
+				&:hover {
+					background: #B62025;
+				}
+
+			}
+
+			.gp {
+
+				&:hover {
+					background: #DC4A38;
+				}
+
+			}
+
+			.li {
+
+				&:hover {
+					background: #0274B3;
+				}
+
+			}
 		}
 
 		ul {
@@ -67,7 +126,23 @@
 			border-left: 3px solid #AF551A;
 			padding: 0 0 0 1rem; 
 
+			@media (max-width: $tablet-width) {
+				border: none;
+				padding: 0;
+				padding-top: .5rem;
+			}
+
 			li {
+				font-size: 1.125rem;
+
+				a {
+					color: white;
+					@include transicion();
+
+					&:hover {
+						color: #AF551A;
+					}
+				}
 
 			}
 		}
