@@ -7,9 +7,9 @@
    <div id="slider-full" class="flexslider PrimalSlider-contenido">
       <ul class="slides">
          <?php while(have_rows('slider_ce', 'option')) : the_row(); ?>
-            <li>
-               <div class="PrimalSlider-slide u-contenedor" style="background-image: url('<?php the_sub_field('imagen', 'option'); ?>');">
-                  <!-- <img class="PrimalSlider-slideImagen" src="" alt="" /> -->
+            <!-- <li> -->
+               <li class="PrimalSlider-slide">
+                  <img class="PrimalSlider-slideImagen" src="<?php the_sub_field('imagen', 'option'); ?>" alt="" />
                   <div class="PrimalSlider-slideCaption">
                      <div class="PrimalSlider-captionText">
                         <h2 class="PrimalSlider-slideTitulo"><?php the_sub_field('titulo', 'option'); ?></h2>
@@ -20,8 +20,8 @@
                         <img src="<?php the_sub_field('imagenDec') ?>" alt="">
                      </figure>
                   </div>
-               </div>
-            </li>
+               </li>
+            <!-- </li> -->
          <?php endwhile; ?>
       </ul>
    </div>

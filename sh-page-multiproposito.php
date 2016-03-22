@@ -133,7 +133,54 @@ get_header(); ?>
 						    	</div>
 						  	</div>
 						</div>
+					<?php endif;  ?>  
 
+					<?php if( get_row_layout() == 'calltoactioninput_layout' ): ?>
+						<!-- StarchiBloques -->
+						<section class="StarchiQuote Newsletter u-contenedorCompleto">
+							<div class="sprite"></div>
+							<!-- Contenedor -->
+							<div class="StarchiQuote-contenido u-contenedor">
+								<div class="StarchiQuote-texto Newsletter-texto">
+									<h2 class="StarchiQuote-textoCita"><?php the_sub_field('titulo'); ?></h2>
+									<p><?php the_sub_field('subtitulo'); ?></p>
+								</div>
+								<div class="StarchiQuote-aside Newsletter-aside">
+									<div class="input">
+										<input class="correo" type="text" placeholder="<?php the_sub_field('placeholder'); ?>">
+										<i class="fa fa-paper-plane"></i>
+									</div>
+									<a class="StarchiQuote-contenidoBtn" href=""><?php the_sub_field('boton'); ?></a>
+								</div>
+							</div>
+							<div class="sprite-2"></div>
+						</section>
+					<?php endif;  ?>  
+
+					<?php if( get_row_layout() == 'filmstrip_layout' ): ?>
+						<div class="Filmstrip">
+							<section class="FilmstripSlider u-contenedor">
+								<!-- <div class="wrapper"> -->
+								<h2 class="FilmstripSlider-titulo"><?php the_sub_field('titulo'); ?></h2>
+								<div class="FilmstripSlider-sliderContenedor">
+									<p class="FilmstripSlider-sliderTitulo"><?php the_sub_field('subtitulo'); ?></p>
+									<div id="slider-filmstrip" class="flexslider FilmstripSlider-contenido">
+									  	<ul class="slides">
+									  		<?php while(have_rows('clientes')) : the_row(); ?>
+									  		<li class="FilmstripSlider-slide">
+									  			<a href="<?php the_sub_field('url'); ?>">
+									  				<img class="FilmstripSlider-slideImagen" src="<?php the_sub_field('logo'); ?>" alt="">
+									  			</a>
+									  		</li>
+									  		<?php endwhile; ?>
+									  	</ul>
+									</div>
+								</div>
+								<figure class="FilmstripSlider-figure">
+									<img src="<?php the_sub_field('imagen'); ?>" alt="">
+								</figure>
+							</section>
+						</div>
 					<?php endif;  ?>  
 
 				<?php endwhile;  ?>

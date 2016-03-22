@@ -36,7 +36,7 @@
         <h4 class="modal-title" id="myModalLabel">Solicitar una demostración</h4>
       </div>
       <div class="modal-body">
-			<?php echo do_shortcode('[contact-form-7 id="190" title="Demostración"]'); ?>
+			<?php echo do_shortcode('[contact-form-7 id="1875" title="CF modal"]'); ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
