@@ -35,8 +35,9 @@ get_header(); ?>
 				<div class="sprite"></div>
 			</figure>
 
-			<div class="u-contenedor contenido-wp-multiproposito">
+			<div class="u-contenedor contenido-wp-multiproposito u-wp-contenido">
 				<?php the_content(); ?>	
+				<?php anliSocialShare(); ?>
 			</div>
 
 			<?php if( have_rows('multiproposito') ): ?>
@@ -45,7 +46,7 @@ get_header(); ?>
 						<section class="Portafolio-contenedor u-contenedorCompleto">
 							<div class="sprite"></div>
 							<div class="Portafolio-heading u-contenedor">
-								<h2><span><?php the_sub_field('titulo'); ?></span></h2>
+								<h2 class="caracteristicas-main-titulo"><span><?php the_sub_field('titulo'); ?></span></h2>
 								<p><?php the_sub_field('subtitulo'); ?></p>
 							</div>
 							<div class="imgrid Caracteristicas Portafolio u-contenedor" id="">
@@ -57,7 +58,7 @@ get_header(); ?>
 											<div class="secundario-2"></div>
 										</div>
 										<div class="texto">
-											<h2><?php the_sub_field('titulo'); ?></h2>
+											<h2 class="caracteristicas-titulo"><?php the_sub_field('titulo'); ?></h2>
 											<p><?php the_sub_field('subtitulo'); ?></p>
 										</div>
 									</div>
@@ -83,14 +84,16 @@ get_header(); ?>
 								  				<blockquote class="PrimalTestimony-blockCita">
 								  					<?php the_sub_field('cita'); ?>
 								  				</blockquote>
-								  				<div class="PrimalTestimony-blockAuthor">
-								  					<h4 class="PrimalTestimony-blockAuthor-name"><?php the_sub_field('autor'); ?></h4>
-								  					<i class="fa fa-quote-left"></i>
-								  					<p class="PrimalTestimony-blockMeta"><?php the_sub_field('descripcion'); ?></p>
-								  				</div>
-								  				<figure class="PrimalTestimony-blockFigure">
-								  					<img src="<?php the_sub_field('foto'); ?>" alt="">
-								  				</figure>
+								  				<a href="<?php the_sub_field('url', 'option'); ?>">
+								  					<div class="PrimalTestimony-blockAuthor">
+								  						<h4 class="PrimalTestimony-blockAuthor-name"><?php the_sub_field('autor', 'option'); ?></h4>
+								  						<i class="fa fa-quote-left"></i>
+								  						<p class="PrimalTestimony-blockMeta"><?php the_sub_field('descripcion', 'option'); ?></p>
+								  					</div>
+								  					<figure class="PrimalTestimony-blockFigure">
+								  						<img src="<?php the_sub_field('foto'); ?>" alt="">
+								  					</figure>
+								  				</a>
 								  			</li>
 								  		<?php endwhile; ?>
 								  	</ul>
@@ -183,10 +186,27 @@ get_header(); ?>
 						</div>
 					<?php endif;  ?>  
 
+
+					<?php if( get_row_layout() == 'hunabix_layout' ): ?>
+						<div class="u-contenedor">
+							<h2 class=""><?php the_sub_field('titulo'); ?></h2>
+							<div class="hunabix">
+								<?php the_sub_field('contenido'); ?>
+							</div>
+						</div>
+					<?php endif;  ?>  
+
+					<?php if( get_row_layout() == 'iru_layout' ): ?>
+						<div class="u-contenedor">
+							<h2 class=""><?php the_sub_field('titulo'); ?></h2>
+							<div class="hibam">
+								<?php the_sub_field('contenido'); ?>
+							</div>
+						</div>
+					<?php endif;  ?>  
+
 				<?php endwhile;  ?>
 			<?php endif;  ?> 
-
-			<?php anliSocialShare(); ?>
 	   
 		</article>
 	<?php endwhile; // end of the loop. ?>

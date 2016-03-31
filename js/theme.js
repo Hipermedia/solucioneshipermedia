@@ -32,21 +32,6 @@ jQuery(document).ready(function($) {
 	// Pone la clase .active a cualquier link que haya en el documento que corresponda con el url actual
 	var url = window.location.href;
 	$('a[href="'+url+'"]').addClass('active');
-
-  // función para desplazamiento lento en enlaces dentro del mismo documento
-  $(function(){
-    $('a[href*=#]').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var $target = $(this.hash);
-          $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-          if ($target.length) {
-            var targetOffset = $target.offset().top;
-            $('html,body').animate({scrollTop: targetOffset}, 1000);
-            return false;
-          }
-        }
-    });
-   }); //fin
   
 	//Agrega una animación al hacer scroll al llegar a un elemento gracias a waypoints
 
@@ -134,24 +119,28 @@ jQuery(document).ready(function($) {
       thumbLightbox: false
     });
 
-    $('#filter-educacion').click(function () {
-      $("#imgrid-portfolio").imgrid('filter', 'educacion');
+    $('#filter-diseno').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'programacion-de-diseno');
+    });
+
+    $('#filter-cobro').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'cobro-en-linea ');
+    });
+
+    $('#filter-efectivo').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'sitio-efectivo');
     });
 
     $('#filter-tienda').click(function () {
       $("#imgrid-portfolio").imgrid('filter', 'tienda-en-linea');
     });
 
-    $('#filter-comerciales').click(function () {
-      $("#imgrid-portfolio").imgrid('filter', 'comerciales');
+    $('#filter-medida').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'desarrollo-web-a-medida');
     });
 
-    $('#filter-institucionales').click(function () {
-      $("#imgrid-portfolio").imgrid('filter', 'institucionales');
-    });
-
-    $('#filter-otros').click(function () {
-      $("#imgrid-portfolio").imgrid('filter', 'otros');
+    $('#filter-noticias').click(function () {
+      $("#imgrid-portfolio").imgrid('filter', 'portal-de-noticias ');
     });
 
     $('#unfilter-button').click(function () {
@@ -176,4 +165,22 @@ jQuery(document).ready(function($) {
           $(this).addClass("active");
       });
     });
+
+
+    // función para desplazamiento lento en enlaces dentro del mismo documento
+    $(function(){
+      $('a[href*=#sh]').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var $target = $(this.hash);
+            $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+            if ($target.length) {
+              var targetOffset = $target.offset().top;
+              $('html,body').animate({scrollTop: targetOffset}, 1000);
+              return false;
+            }
+          }
+      });
+     }); 
+     //fin
+
 });

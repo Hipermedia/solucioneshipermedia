@@ -53,7 +53,7 @@ get_header(); ?>
 
 	<?php filmstripSlider(); ?>
 	
-	<a name="contacto"></a>
+	<a name="shcontacto"></a>
 	<section class="Contacto">
 		<div class="sprite"></div>
 		<div class="u-contenedor">

@@ -9,8 +9,6 @@
 		<!-- Títulos de la sección -->
 		<h2 class="PrimalBlocks-titulo"><?php the_field('tituloBlog', 'option'); ?></h2>
 		<h3 class="PrimalBlocks-subtitulo"><?php the_field('subtituloBlog', 'option'); ?></h3>
-		
-
 
 		<?php
 		$cat = get_field('categoriaBlog', 'option');
@@ -20,7 +18,9 @@
 		// the query
 		$the_query = new WP_Query( $args ); ?>
 		<?php if ( $the_query->have_posts() ) : ?>
+			<?php $contador = 0; ?>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<?php $contador++; ?>
 				<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>
 
 				<?php $fecha = get_the_time(get_option('date_format')); ?>
@@ -29,7 +29,7 @@
 
 				<?php $mes = substr($fecha, 2, 4); ?>
 
-				<div class="PrimalBlocks-block">
+				<div class="PrimalBlocks-block <?php if($contador>1){echo "u-hide";} ?>">
 					<figure class="PrimalBlocks-blockFigure">
 						<img src="<?php echo $url; ?>" alt="">
 					</figure>

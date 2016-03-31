@@ -18,7 +18,7 @@
 
 		<div class="StarchiQuote-aside">
 			<a class="StarchiQuote-contenidoBtn" href="" data-toggle="modal" data-target="#myModal">Quiero solicitar una demostración</a>
-			<a href="">o leer un poquito más al respecto</a>
+			<!-- <a href="">o leer un poquito más al respecto</a> -->
 		</div>
 	</div>
 

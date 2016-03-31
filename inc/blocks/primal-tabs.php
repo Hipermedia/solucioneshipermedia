@@ -1,7 +1,7 @@
 <?php 
 
 ?>
-<a name="servicios"></a>
+<a name="shservicios"></a>
 <section class="PrimalTabs u-contenedorCompleto">
 	<div class="PrimalTabs-contenido u-contenedor">
 		<h2 class="PrimalTabs-cotenidoTitulo">Servicios</h2>
@@ -44,7 +44,7 @@
 						<li><i class="fa fa-check"></i>Capacitación sobre el gestor de contenido</li>
 						<li><i class="fa fa-check"></i>Soporte técnico a ti o a tu cliente en tu nombre</li>
 					</ul>
-					<a href="" class="PrimalTabs-contentBtn primer-servicio">Me interesa, dime más</a>
+					<a href="<?php echo home_url(); ?>/servicios/programacion-de-diseno-web/" class="PrimalTabs-contentBtn primer-servicio">Me interesa, dime más</a>
 				</div>
 			</div>
 
@@ -66,7 +66,7 @@
 						<li><i class="fa fa-check"></i>Da seguimiento al proceso de compra por depósito</li>
 						<li><i class="fa fa-check"></i>Compatible con dispositivos móviles</li>
 					</ul>
-					<a href="" class="PrimalTabs-contentBtn segundo-servicio">Quiero ver una demostración</a>
+					<a href="<?php echo home_url(); ?>/servicios/cobrar-por-internet/" class="PrimalTabs-contentBtn segundo-servicio">Quiero ver una demostración</a>
 					
 				</div>
 			</div>
@@ -89,7 +89,7 @@
 						<li><i class="fa fa-check"></i>Marketing en redes sociales</li>
 						<li><i class="fa fa-check"></i>Analítica</li>
 					</ul>
-					<a href="" class="PrimalTabs-contentBtn tercer-servicio">Necesito más información</a>
+					<a href="<?php echo home_url(); ?>/servicios/consultoria-en-marketing-digital/" class="PrimalTabs-contentBtn tercer-servicio">Necesito más información</a>
 					
 				</div>
 			</div>
@@ -112,7 +112,7 @@
 						<li><i class="fa fa-check"></i>Capacitación y soporte técnico</li>
 						<li><i class="fa fa-check"></i>Permite administrar el contenido muy fácil</li>
 					</ul>
-					<a href="" class="PrimalTabs-contentBtn cuarto-servicio">Suena bien, dime más</a>
+					<a href="<?php echo home_url(); ?>/servicios/sitio-web-efectivo/" class="PrimalTabs-contentBtn cuarto-servicio">Suena bien, dime más</a>
 					
 				</div>
 			</div>
@@ -135,7 +135,7 @@
 		    			<li><i class="fa fa-check"></i>Capacitación y soporte técnico</li>
 		    			<li><i class="fa fa-check"></i>Permite administrar el contenido muy fácil</li>
 		    		</ul>
-		    		<a href="" class="PrimalTabs-contentBtn quinto-servicio">Suena bien, dime más</a>
+		    		<a href="<?php echo home_url(); ?>/servicios/desarrollo-web/" class="PrimalTabs-contentBtn quinto-servicio">Suena bien, dime más</a>
 		    	</div>
 		    </div>
 		</div>

@@ -17,14 +17,16 @@
 		  				<blockquote class="PrimalTestimony-blockCita">
 		  					<?php the_sub_field('cita', 'option'); ?>
 		  				</blockquote>
-		  				<div class="PrimalTestimony-blockAuthor">
-		  					<h4 class="PrimalTestimony-blockAuthor-name"><?php the_sub_field('autor', 'option'); ?></h4>
-		  					<i class="fa fa-quote-left"></i>
-		  					<p class="PrimalTestimony-blockMeta"><?php the_sub_field('descripcion', 'option'); ?></p>
-		  				</div>
-		  				<figure class="PrimalTestimony-blockFigure">
-		  					<img src="<?php echo get_plantilla_url().'/images/user.png'; ?>" alt="">
-		  				</figure>
+		  				<a href="<?php the_sub_field('url', 'option'); ?>">
+		  					<div class="PrimalTestimony-blockAuthor">
+		  						<h4 class="PrimalTestimony-blockAuthor-name"><?php the_sub_field('autor', 'option'); ?></h4>
+		  						<i class="fa fa-quote-left"></i>
+		  						<p class="PrimalTestimony-blockMeta"><?php the_sub_field('descripcion', 'option'); ?></p>
+		  					</div>
+		  					<figure class="PrimalTestimony-blockFigure">
+		  						<img src="<?php the_sub_field('foto'); ?>" alt="">
+		  					</figure>
+		  				</a>
 		  			</li>
 		  		<?php endwhile; ?>
 		  	</ul>

@@ -21412,12 +21412,13 @@ form.wpcf7-form input[type="submit"]:hover {
   position: relative;
   background-position: center bottom;
   background-size: 100%;
+  height: 450px;
   /*padding: 2rem 0;*/
   /*background-attachment: fixed;*/
 }
 
 .PrimalSlider .PrimalSlider-contenido .PrimalSlider-slide .PrimalSlider-slideImagen {
-  /*width: auto;*/
+  height: 450px !important;
 }
 
 .PrimalSlider .PrimalSlider-contenido .PrimalSlider-slide .PrimalSlider-slideCaption {
@@ -21512,7 +21513,7 @@ form.wpcf7-form input[type="submit"]:hover {
   text-shadow: none;
   margin: 0 auto;
   display: block;
-  background: #008ABC;
+  background: peru;
   text-align: center;
   width: 55%;
   position: relative;

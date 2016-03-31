@@ -16,9 +16,7 @@ get_header(); ?>
 	        <section class="Articulos">            
 
 	            <!-- Título -->
-	            <h1 class="Articulos-titulo">
-	                 <?php echo single_cat_title( '', false );?>
-	            </h1>		
+
 	    		<!-- Artículos -->
 	            <?php while ( have_posts() ) : the_post(); ?>
 	                
@@ -42,10 +40,10 @@ get_header(); ?>
 	  
 	    <?php endif; ?>
 	    
-	    <?php get_sidebar(); ?>
+	    <?php //get_sidebar(); ?>
 
 	</section>
 
-	<?php get_sidebar(); ?>
+	<?php //get_sidebar(); ?>
 	
 <?php get_footer(); ?>

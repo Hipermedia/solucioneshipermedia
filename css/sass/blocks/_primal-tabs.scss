@@ -150,7 +150,7 @@
 			.quinto-servicio {
 
 				&:hover {
-					background:-color #0055A5;
+					background-color: #0055A5;
 					
 					&::after {
 						background: #003D7E;
@@ -319,41 +319,90 @@
 					
 					.primer-servicio {
 						background: #FF3429;
+						@include transicion();
 
 						&::after {
 							background: #A50C03;
+							@include transicion();
 						}
+
+						&:hover {
+							background: #a50c03; 
+						
+							&::after {
+								background: #740600;
+							}						}
 					}
 
 					.segundo-servicio {
 						background: #F37A1F;
+						@include transicion();
 
 						&::after {
 							background: #B25416;
+							@include transicion();
+						}
+
+						&:hover {
+							background: #b25416;
+						
+							&::after {
+								background: #90400b;
+							}						
 						}
 					}
 
 					.tercer-servicio {
 						background: #008ABC;
+						@include transicion();
 
 						&::after {
 							background: #045D85;
+							@include transicion();
+						}
+
+						&:hover {
+							background: #045d85;
+						
+							&::after {
+								background: #024d6f;
+							}						
 						}
 					}
 
 					.cuarto-servicio {
 						background: #00AF51;
+						@include transicion();
 
 						&::after {
 							background: #015F1B;
+							@include transicion();
+						}
+
+						&:hover {
+							background: #015f1b;
+						
+							&::after {
+								background: #014d16;
+							}						
 						}
 					}
 
 					.quinto-servicio {
 						background: #0055A5;
+						@include transicion();
 
 						&::after {
 							background: #003D7E;
+							@include transicion();
+						}
+
+						&:hover {
+							background: #003d7e;
+
+							&::after {
+								background: #012d62;
+							}						
 						}
 					}
 				}

@@ -139,6 +139,10 @@
 	background-image: url('images/newsletter.jpg');
 	background-color: #010D1D;
 	
+	@media (max-width: $tablet-width) {
+		background-image: none;
+		background-color: #010D1D !important;
+	}
 
 	.sprite {
 		background-image: url('images/spriteslides.png');

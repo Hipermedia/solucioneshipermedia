@@ -234,6 +234,12 @@ Text Domain: shbase
 					border-bottom: 4px solid #B25416;
 					@include transicion ();
 
+					@media (max-width: $smaller-width) {
+						display: block;
+						margin: 0 auto;
+						float: none;
+						margin-top: 1.5rem;					}
+
 					&::after {
 /*						content: "";
 						height: 6px;
@@ -260,6 +266,10 @@ Text Domain: shbase
 .Caracteristicas {
 	text-align: center;
 	padding-top: 3rem;
+
+	@media (max-width: $smaller-width) {
+		max-height: 1500px;
+	}
 
 	.Caracteristicas-bloque {
 		display: inline-block;
@@ -338,6 +348,8 @@ Text Domain: shbase
 			h2 {
 				font-weight: bold;
 				color: #FDA82F;
+				height: 70px;
+				padding: .5rem 0;
 			}
 
 			p {
@@ -349,4 +361,117 @@ Text Domain: shbase
 
 .contenido-wp-multiproposito {
 	padding-bottom: 3rem;
+}
+
+
+.u-wp-contenido {
+
+	@media (max-width: $tablet-width) {
+		padding: 0 1rem;
+	}
+
+	.fancy-btn {
+		margin-bottom: .5rem;
+		width: 55%;
+		@include boton-chido();
+
+		@media (max-width: $tablet-width) {
+			width: 96%;
+		}
+	}
+	
+	.rojo {
+		background: #FF3429;
+
+		&::after {
+			background: #A50C03;
+		}
+	}
+
+	.naranja {
+		background: #F37A1F;
+
+		&::after {
+			background: #B25416;
+		}
+	}
+
+	.azul-claro {
+		background: #008ABC;
+
+		&::after {
+			background: #045D85;
+		}
+	}
+
+	.verde {
+		background: #00AF51;
+
+		&::after {
+			background: #015F1B;
+		}
+	}
+
+	.azul-fuerte {
+		background: #0055A5;
+
+		&::after {
+			background: #003D7E;
+		}
+	}
+}
+
+.u-hide {
+	@media (max-width: $smaller-width) {
+		display: none;
+	}
+}
+
+
+.hunabix, .hibam {
+	background: #EEEEEE;
+	margin-bottom: 2rem;
+	position: relative;
+	border-radius: 3px;
+	border: 2px solid #333;
+	padding: 0 2rem;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
+}
+
+.hunabix{
+	margin-top: 280px;
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+	min-height: 300px;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -281px;
+		width: 270px;
+		height: 317px;
+		background-image: url('images/hunabix.png');
+	}
+}
+
+.hibam{
+	margin-top: 100px;
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+	padding-left: 6rem;
+	width: 82%;
+	margin-left: 195px;
+	min-height: 380px;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: -190px;
+		width: 273px;
+		height: 332px;
+		background-image: url('images/hibam.png');
+	}
 }

@@ -43,7 +43,7 @@
 	  	.current-menu-item {
 
 	  		a {
-	  			color: #F3A738;
+	  			color: white;
 	  		}
 	  	}
 	  }
@@ -120,6 +120,11 @@
 	/* Clase del botón del menú que se muestra en pantallas pequeñas */
 	.toggle-nav {
 	    display:none;
+	    color: white !important;
+
+	    a {
+	    	color: white;
+	    }
 
 	    @media (max-width: $tablet-width) {
 	        padding:.5rem;
@@ -128,7 +133,7 @@
 	        max-width: 280px;
 	        text-align: center;
 	        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
-	        background:#444;
+	        background: #008ABC;
 	        color:#fff;
 	        font-size:1.25rem;
 	        text-transform: uppercase;
@@ -144,8 +149,8 @@
     .current-menu-item {
 
     	a {
-    		color: #F3A738;
-			border-bottom: 3px solid #FFA91A;
+/*    		color: #F3A738;
+			border-bottom: 3px solid #FFA91A;*/
     	}
     }
 }

@@ -2,10 +2,13 @@
 /* Footer
  ----------------------------------*/
 ?>
+    <?php if(!is_home()) : ?>
+        <div class="sprite-2"></div>
+    <?php endif; ?>
 
 </main>
 
-<footer class="Footer">	
+<footer class="Footer">
     
     <section class="u-contenedor">
     	
