@@ -9,7 +9,7 @@
 </main>
 
 <footer class="Footer">
-    
+
     <section class="u-contenedor">
     	
     	<div class="Footer-bloque">
@@ -48,11 +48,11 @@
 
     	<div class="Footer-bloque">
     		<ul>
-    			<li><a href="">Inicio</a></li>
-    			<li><a href="">Servicios</a></li>
-    			<li><a href="">Portafolio</a></li>
-    			<li><a href="">Contacto</a></li>
-    			<li><a href="">No hacer click aquí</a></li>
+    			<li><a href="<?php inicio_url(); ?>">Inicio</a></li>
+    			<li><a href="<?php inicio_url(); ?>/#shservicios">Servicios</a></li>
+    			<li><a href="<?php inicio_url(); ?>/#shportafolio">Portafolio</a></li>
+    			<li><a href="<?php inicio_url(); ?>/#shcontacto">Contacto</a></li>
+    			<li><a href="<?php inicio_url(); ?>">No hacer click aquí</a></li>
     		</ul>
     	</div>
 
