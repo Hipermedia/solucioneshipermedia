@@ -84,8 +84,16 @@ get_header(); ?>
 						<?php $servicios = get_field_object('serviciosPortafolioItem'); ?>
 						<?php $value = $servicios['value']; ?>
 						<?php $choices = $servicios['choices']; ?>
+						<?php $home_url = home_url(); ?>
 						<?php foreach( $value as $v ): ?>
-							<p class="Post-portafolioServicio"><span class="<?php echo $v; ?>"></span><?php echo $choices[$v]; ?></p>
+							<?php if($v=='uno') {$zelda=$home_url.'/servicios/programacion-de-diseno-web/';} ?>
+							<?php if($v=='dos') {$zelda=$home_url.'/servicios/consultoria-en-marketing-digital/';} ?>
+							<?php if($v=='tres') {$zelda=$home_url.'/servicios/desarrollo-web/';} ?>
+							<?php if($v=='cuatro') {$zelda=$home_url.'/servicios/cobrar-por-internet/';} ?>
+							<?php if($v=='cinco') {$zelda=$home_url.'/#/';} ?>
+							<?php if($v=='seis') {$zelda=$home_url.'/#/';} ?>
+							<?php if($v=='siete') {$zelda=$home_url.'/servicios/sitio-web-efectivo/';} ?>
+							<a href="<?php echo $zelda; ?>" class="Post-portafolioServicio"><span class="<?php echo $v; ?>"></span><?php echo $choices[$v]; ?></a>
 						<?php endforeach; ?>
 						<?php //var_dump($servicios); ?>
 					</div>

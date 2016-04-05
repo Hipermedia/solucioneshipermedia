@@ -20668,13 +20668,15 @@ form.wpcf7-form input[type="submit"]:hover {
 
 .Post .Post-portafolioItem .panel .Post-portafolioFigure {
   display: inline-block;
+  vertical-align: top;
   width: 30%;
-  padding: 2rem 2rem 0 0;
+  padding: 0 2rem 0 0;
 }
 
 .Post .Post-portafolioItem .panel .Post-portafolioContent {
   display: inline-block;
   width: 69%;
+  padding-bottom: 1rem;
 }
 
 .Post .Post-portafolioItem .panel .Post-portafolioServicio {
@@ -20720,17 +20722,38 @@ form.wpcf7-form input[type="submit"]:hover {
   vertical-align: top;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .mayoria, .Post .Post-portafolioItem .panel .Post-portafolioDisenador .resto {
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos {
+  width: 79%;
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .socio {
+  margin: 0;
+  text-transform: uppercase;
+  color: #424242;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .giro {
+  color: #676767;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .mayoria, .Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto {
   display: inline-block;
   vertical-align: top;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .mayoria .dato, .Post .Post-portafolioItem .panel .Post-portafolioDisenador .resto .dato {
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .mayoria .dato, .Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .dato {
   color: #3B3B3B;
   font-size: 1.2rem;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .mayoria .dato span, .Post .Post-portafolioItem .panel .Post-portafolioDisenador .resto .dato span {
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .mayoria .dato span, .Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .dato span {
   display: inline-block;
   width: 37px;
   height: 37px;
@@ -20741,7 +20764,7 @@ form.wpcf7-form input[type="submit"]:hover {
   margin-right: 1rem;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .mayoria .dato span::after, .Post .Post-portafolioItem .panel .Post-portafolioDisenador .resto .dato span::after {
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .mayoria .dato span::after, .Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .dato span::after {
   content: "";
   height: 3px;
   width: 100%;
@@ -20758,31 +20781,37 @@ form.wpcf7-form input[type="submit"]:hover {
   transition: all 0.5s ease-in-out;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .mayoria {
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .mayoria {
   width: 49%;
-  padding: 0 1rem;
+  padding-right: 1rem;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .mayoria .socio {
-  margin: 0;
-  text-transform: uppercase;
-  color: #424242;
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: .5rem;
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .mayoria .correo {
+  background-image: url("images/socio/correo.png");
+  background-position: center;
+  /*background-size: 100%;*/
+  background-repeat: no-repeat;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .mayoria .giro {
-  color: #676767;
-  font-weight: 600;
-  font-size: 1.5rem;
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .mayoria .telefono {
+  background-image: url("images/socio/fon.png");
+  background-position: center;
+  /*background-size: 100%;*/
+  background-repeat: no-repeat;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .resto {
-  width: 30%;
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto {
+  width: 49%;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .resto .social {
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .web {
+  background-image: url("images/socio/web.png");
+  background-position: center;
+  /*background-size: 100%;*/
+  background-repeat: no-repeat;
+}
+
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .social {
   width: 37px;
   height: 37px;
   display: inline-block;
@@ -20791,7 +20820,7 @@ form.wpcf7-form input[type="submit"]:hover {
   z-index: 0;
 }
 
-.Post .Post-portafolioItem .panel .Post-portafolioDisenador .resto .social::after {
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .social::after {
   content: "";
   height: 3px;
   width: 100%;
@@ -20806,6 +20835,27 @@ form.wpcf7-form input[type="submit"]:hover {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .fb {
+  background-image: url("images/socio/fb.png");
+  background-position: center;
+  /*background-size: 100%;*/
+  background-repeat: no-repeat;
+}
+
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .tw {
+  background-image: url("images/socio/tw.png");
+  background-position: center;
+  /*background-size: 100%;*/
+  background-repeat: no-repeat;
+}
+
+.Post .Post-portafolioItem .panel .Post-portafolioDisenador .datos .resto .gp {
+  background-image: url("images/socio/gp.png");
+  background-position: center;
+  /*background-size: 100%;*/
+  background-repeat: no-repeat;
 }
 
 /*------------------------------------------------*/
