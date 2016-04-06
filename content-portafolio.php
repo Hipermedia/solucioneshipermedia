@@ -82,7 +82,7 @@
 										<?php if(get_field('correoSocio')) :  ?>
 											<p class="dato"><span class="correo"></span><?php the_field('correoSocio'); ?></p>
 										<?php endif; ?>
-										<?php if(get_field('correoSocio')) :  ?>
+										<?php if(get_field('telefonoSocio')) :  ?>
 											<p class="dato"><span class="telefono"></span><?php the_field('telefonoSocio'); ?></p>
 										<?php endif; ?>											
 									</div>
