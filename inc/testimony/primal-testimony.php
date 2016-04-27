@@ -3,7 +3,7 @@
 ------------------------------------------------------------------- */ 
 ?>
 <!-- PrimalBloques -->
-<section class="PrimalTestimony">
+<section class="PrimalTestimony u-contenido">
 	<!-- Contenedor -->
 	<div class="PrimalTestimony-contenido u-contenedor">
 		<!-- Títulos de la sección -->
@@ -17,8 +17,8 @@
 		  				<blockquote class="PrimalTestimony-blockCita">
 		  					<?php the_sub_field('cita', 'option'); ?>
 		  				</blockquote>
-		  				<a href="<?php the_sub_field('url', 'option'); ?>">
-		  					<div class="PrimalTestimony-blockAuthor">
+		  				<a href="<?php the_sub_field('url', 'option'); ?>" class="PrimalTestimony-blockAuthor">
+		  					<div class="PrimalTestimony-blockAuthor-info">
 		  						<h4 class="PrimalTestimony-blockAuthor-name"><?php the_sub_field('autor', 'option'); ?></h4>
 		  						<i class="fa fa-quote-left"></i>
 		  						<p class="PrimalTestimony-blockMeta"><?php the_sub_field('descripcion', 'option'); ?></p>

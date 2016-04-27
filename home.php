@@ -15,8 +15,6 @@
 get_header(); ?>
 
 	<!-- Cover -->
-	<?php //primalCover(); ?>
-
 	<?php primalSlider(); ?>
 
 	<?php primalTabs(); ?>

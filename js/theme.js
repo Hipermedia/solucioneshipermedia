@@ -152,10 +152,10 @@ jQuery(document).ready(function($) {
     $('#testimonios-slider').flexslider({
       animation: "slide",
       animationLoop: false,
-      itemWidth: 300,
-      itemMargin: 10,
+      itemWidth: 330,
+      itemMargin: 100,
       directionNav: false,
-      slideshow: true
+      slideshow: false
     });
 
     $(function() {

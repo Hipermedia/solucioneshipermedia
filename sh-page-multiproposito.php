@@ -39,9 +39,12 @@ get_header(); ?>
 				<?php the_content(); ?>	
 				<?php anliSocialShare(); ?>
 			</div>
-
+			
+			<!-- Bloques multipropósito -->
 			<?php if( have_rows('multiproposito') ): ?>
 				<?php while ( have_rows('multiproposito') ) : the_row(); ?> 
+
+					<!-- Bloque: Características -->
 					<?php if( get_row_layout() == 'caracteristicas_layout' ): ?>
 						<section class="Portafolio-contenedor u-contenedorCompleto">
 							<div class="sprite"></div>
@@ -67,7 +70,8 @@ get_header(); ?>
 							<div class="sprite-2"></div>
 						</section>
 					<?php endif;  ?>
-
+					
+					<!-- Bloque: Testimonios -->
 					<?php if( get_row_layout() == 'testimonios_layout' ): ?>
 						<!-- PrimalBloques -->
 						<section class="PrimalTestimony">
@@ -84,8 +88,8 @@ get_header(); ?>
 								  				<blockquote class="PrimalTestimony-blockCita">
 								  					<?php the_sub_field('cita'); ?>
 								  				</blockquote>
-								  				<a href="<?php the_sub_field('url', 'option'); ?>">
-								  					<div class="PrimalTestimony-blockAuthor">
+								  				<a href="<?php the_sub_field('url', 'option'); ?>" class="PrimalTestimony-blockAuthor">
+								  					<div class="PrimalTestimony-blockAuthor-info">
 								  						<h4 class="PrimalTestimony-blockAuthor-name"><?php the_sub_field('autor', 'option'); ?></h4>
 								  						<i class="fa fa-quote-left"></i>
 								  						<p class="PrimalTestimony-blockMeta"><?php the_sub_field('descripcion', 'option'); ?></p>
@@ -101,7 +105,8 @@ get_header(); ?>
 							</div>
 						</section>
 					<?php endif;  ?>  
-
+					
+					<!-- Bloque: Llamada a la acción -->
 					<?php if( get_row_layout() == 'calltoaction_layout' ): ?>
 						<section class="StarchiQuote u-contenedorCompleto">
 							<div class="sprite"></div>
@@ -136,8 +141,9 @@ get_header(); ?>
 						    	</div>
 						  	</div>
 						</div>
-					<?php endif;  ?>  
+					<?php endif;  ?> 
 
+					<!-- Bloque: Llamada ala acción -->
 					<?php if( get_row_layout() == 'calltoactioninput_layout' ): ?>
 						<!-- StarchiBloques -->
 						<section class="StarchiQuote Newsletter u-contenedorCompleto">
@@ -159,7 +165,8 @@ get_header(); ?>
 							<div class="sprite-2"></div>
 						</section>
 					<?php endif;  ?>  
-
+					
+					<!-- Bloque: Filmstrip -->					
 					<?php if( get_row_layout() == 'filmstrip_layout' ): ?>
 						<div class="Filmstrip">
 							<section class="FilmstripSlider u-contenedor">
@@ -186,7 +193,7 @@ get_header(); ?>
 						</div>
 					<?php endif;  ?>  
 
-
+					<!-- Bloque: Hunabix -->
 					<?php if( get_row_layout() == 'hunabix_layout' ): ?>
 						<div class="u-contenedor">
 							<h2 class=""><?php the_sub_field('titulo'); ?></h2>
@@ -195,7 +202,8 @@ get_header(); ?>
 							</div>
 						</div>
 					<?php endif;  ?>  
-
+					
+					<!-- Bloque: Iru -->
 					<?php if( get_row_layout() == 'iru_layout' ): ?>
 						<div class="u-contenedor">
 							<h2 class=""><?php the_sub_field('titulo'); ?></h2>

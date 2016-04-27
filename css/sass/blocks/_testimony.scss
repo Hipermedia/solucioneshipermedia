@@ -56,65 +56,64 @@
 		}
 
 		.PrimalTestimony-block {
-			/*display: inline-block;*/
 			vertical-align: top;
-			/*width: 30%;*/
-			/*margin: 0 1.5% 3rem;	*/
 			position: relative;
 			background: white;
 			border-radius: 3px;
 			padding: 0 1rem;
-			/*margin: 0 .1%;*/
 			-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.6);
 			-moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.6);
 			box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.6);
 			margin: 0 19px;
 			width: 330px !important;
+			height: 22rem;
 			
 			// Responsive
 			@media (max-width: $tablet-width) {
-				width: 100%;
-				margin: 0 0 3rem;
+				margin: 0 0 3rem !important;
 			}
 
 			.PrimalTestimony-blockCita {
 				border: none;
-				/*margin: 0 0 1.5rem;*/
 				padding: 0;
-				/*font-family: Georgia;*/
-				/*font-style: italic;*/
+				font-family: Georgia;
+				font-style: italic;
 				font-size: 1.2rem;
 				line-height: 1.25;
 				padding: 2rem 0rem .5rem;
 				margin: 0;
-				/*padding-left: 3rem;*/
 			}
-
+			
 			.PrimalTestimony-blockAuthor {
-				font-weight: bold;
-				/*padding-left: 1.5rem;*/
-				line-height: 1.15;
-				float: left;
-				width: 70%;
+				position: absolute;
+				bottom: 1rem;
 
-				.PrimalTestimony-blockAuthor-name {
-					text-align: right;
-					padding-right: 1.3rem;
-					font-weight: 600;
-				} 
+				.PrimalTestimony-blockAuthor-info {
+					font-weight: bold;
+					/*padding-left: 1.5rem;*/
+					line-height: 1.15;
+					float: left;
+					width: 70%;
 
-				i {
-					display: inline-block;
-					width: 20%;
-					font-size: 2.5rem;
-					color: #B25416;
-				}
+					.PrimalTestimony-blockAuthor-name {
+						text-align: right;
+						padding-right: 1.3rem;
+						font-weight: 600;
+					} 
 
-				.PrimalTestimony-blockMeta {
-					font-weight: normal;
-					display: inline-block;
-					width: 78%;
-					font-weight: 600;
+					i {
+						display: inline-block;
+						width: 20%;
+						font-size: 2.5rem;
+						color: #B25416;
+					}
+
+					.PrimalTestimony-blockMeta {
+						font-weight: normal;
+						display: inline-block;
+						width: 78%;
+						font-weight: 600;
+					}
 				}
 			}
 

@@ -1,11 +1,11 @@
 /*
-Theme Name: SH Base
-Theme URI: http://www.solucioneshipermedia.com/nuestro-trabajo/
+Theme Name: SHipermedia
+Theme URI: http://www.solucioneshipermedia.com/
 Author: Soluciones Hipermedia
 Author URI: http://www.solucioneshipermedia.com/
-Description: Tema base Wordpress para desarrollo de proyectos de Soluciones Hipermedia
-Version: 1.1
-Text Domain: shbase
+Description: Sitio web de Soluciones Hipermedia
+Version: 0.1.2
+Text Domain: shipermedia
 */ 
 
 /* Iniciales
@@ -25,34 +25,7 @@ Text Domain: shbase
 /*imGrid plugin*/
 @import "support/imgrid/_imgrid.scss";
 @import "support/imgrid/_imgrid.hover.scss";
-@import "support/imgrid/hover/_apollo.scss";
-@import "support/imgrid/hover/_bubba.scss";
-@import "support/imgrid/hover/_chico.scss";
-@import "support/imgrid/hover/_duke.scss";
-@import "support/imgrid/hover/_goliath.scss";
-@import "support/imgrid/hover/_hera.scss";
-@import "support/imgrid/hover/_hover.scss";
-@import "support/imgrid/hover/_jazz.scss";
-@import "support/imgrid/hover/_julia.scss";
-@import "support/imgrid/hover/_kira.scss";
-@import "support/imgrid/hover/_lexi.scss";
-@import "support/imgrid/hover/_lily.scss";
-@import "support/imgrid/hover/_marley.scss";
-@import "support/imgrid/hover/_milo.scss";
 @import "support/imgrid/hover/_ming.scss";
-@import "support/imgrid/hover/_oscar.scss";
-@import "support/imgrid/hover/_romeo.scss";
-@import "support/imgrid/hover/_ruby.scss";
-@import "support/imgrid/hover/_sadie.scss";
-@import "support/imgrid/hover/_sarah.scss";
-@import "support/imgrid/hover/_steve.scss";
-@import "support/imgrid/hover/_zoe.scss";
-
-
-// Bootstrap Material Desing
-//@import "support/bootstrap-material/_material.scss"; /* Bootstrap Material Desing */
-//@import "support/bootstrap-material/_material-wfont.scss"; /* Bootstrap Material Desing */
-//@import "support/bootstrap-material/_ripples.scss"; /* Bootstrap Material Desing */
 
 /* Base
 ------------------------------------------*/
