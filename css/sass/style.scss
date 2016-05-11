@@ -321,6 +321,7 @@ Text Domain: shipermedia
 	}
 	&:hover {
 		background: $blue-dark;
+		color: $main-color-text;
 		&::after { background: $blue-darker; }
 	}
 }

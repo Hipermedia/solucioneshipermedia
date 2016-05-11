@@ -21187,6 +21187,7 @@ form.wpcf7-form input[type="submit"]:hover {
 
 .u-btn:hover {
   background: #045D85;
+  color: #FFFFFF;
 }
 
 .u-btn:hover::after {
