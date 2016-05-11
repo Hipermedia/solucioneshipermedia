@@ -2,7 +2,7 @@
 /*------------------[BLOCKS]----------------------*/
 /*------------------------------------------------*/
 
-.StarchiQuote {
+.CallToAction {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-image: url('images/videochat.jpg');
@@ -35,7 +35,7 @@
 		background-position: center -385px;
 	}
 
-	.StarchiQuote-contenido {
+	.CallToAction-contenido {
 		padding-bottom: 1rem;
 		position: relative;
 		z-index: 0;
@@ -47,7 +47,7 @@
 			padding: 0;
 		}
 
-		.StarchiQuote-texto {
+		.CallToAction-texto {
 			/*text-align: center;*/
 			width: 450px;
 			padding: 3rem 0;
@@ -62,18 +62,17 @@
 				padding: 0;
 			}
 
-			.StarchiQuote-textoCita {
-				/*text-shadow: 1px 1px black;*/
-				/*font-style: italic;*/
-				/*color: white;*/
-				/*font-size: 3rem;*/
-				font-size: 1.3rem;
+			.CallToAction-textoCita {
+				font-weight: bold !important;
+    			color: white;
+    			font-size: 2.25rem !important;
 				@media (max-width: $smaller-width) {
 					font-size: 1.8rem;
 					margin-top: 5%;
 				}
 
 				strong {
+					
 					
 				}
 			}
@@ -83,7 +82,7 @@
 			}
 		}
 
-		.StarchiQuote-aside {
+		.CallToAction-aside {
 			width: 58%;
 			display: inline-block;
 			text-align: center;
@@ -92,7 +91,7 @@
 				width: 90%;
 			}
 
-			.StarchiQuote-contenidoBtn {
+			.CallToAction-contenidoBtn {
 				padding: .85rem 1.8rem;
 				font-size: 20px;
 				color: #fff;

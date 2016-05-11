@@ -55,8 +55,8 @@ Text Domain: shipermedia
 @import "blocks/_filmstrip-slider.scss";
 @import "blocks/_portfolio-imgrid.scss";
 
-/*--Quotes*/
-@import "blocks/_starchi-quote.scss";
+/*--Call to Action*/
+@import "blocks/_call-to-action.scss";
 
 /*--Gallery*/
 @import "blocks/_primal-gallery.scss";
@@ -75,7 +75,6 @@ Text Domain: shipermedia
 .bg-white {
 	background: white;
 }
-
 
 .Caracteristicas {
 	text-align: center;
@@ -289,3 +288,64 @@ Text Domain: shipermedia
 		background-image: url('images/hibam.png');
 	}
 }
+
+// Botón 
+.u-btn {
+	padding: .85rem 1.8rem;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 2px;
+	text-shadow: none;
+	margin: 0 auto 1rem;
+	display: block;
+	width: auto;
+	background: $blue;
+	text-align: center;
+	max-width: 60%;
+	position: relative;
+	z-index: 0;
+	@include transicion ();
+
+	&::after {
+		content: "";
+		height: 6px;
+		width: 100%;
+		display: block;
+		background:$blue-dark;
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		z-index: -1;
+		border-bottom-right-radius: 2px;
+		border-bottom-left-radius: 2px;
+	}
+	&:hover {
+		background: $blue-dark;
+		&::after { background: $blue-darker; }
+	}
+}
+// Botón rojo
+.u-btn.rojo {
+	background: $red;
+	&::after { background: $red-dark; }
+	&:hover { background: $red-dark; color: $main-color-text;
+		&::after { background: $red-darker; }
+	}
+}
+// Botón naranja
+.u-btn.naranja {
+	background: $orange;
+	&::after { background: $orange-dark; }
+	&:hover { background: $orange-dark; color: $main-color-text;
+		&::after { background: $orange-darker; }
+	}
+}
+// Botón verde
+.u-btn.verde {
+	background: $green;
+	&::after { background: $green-dark; }
+	&:hover { background: $green-dark; color: $main-color-text;
+		&::after { background: $green-darker; }
+	}
+}
+

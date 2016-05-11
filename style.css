@@ -19801,11 +19801,11 @@ form.wpcf7-form input[type="submit"]:hover {
   padding: 0 1rem;
 }
 
-/*--Quotes*/
+/*--Call to Action*/
 /*------------------------------------------------*/
 /*------------------[BLOCKS]----------------------*/
 /*------------------------------------------------*/
-.StarchiQuote {
+.CallToAction {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-image: url("images/videochat.jpg");
@@ -19818,13 +19818,13 @@ form.wpcf7-form input[type="submit"]:hover {
 }
 
 @media (max-width: 880px) {
-  .StarchiQuote {
+  .CallToAction {
     background-size: auto auto;
     background-attachment: local;
   }
 }
 
-.StarchiQuote .sprite {
+.CallToAction .sprite {
   background-image: url("images/spriteslides.png");
   background-repeat: no-repeat;
   width: 100%;
@@ -19833,7 +19833,7 @@ form.wpcf7-form input[type="submit"]:hover {
   background-position: center -295px;
 }
 
-.StarchiQuote .sprite-2 {
+.CallToAction .sprite-2 {
   background-image: url("images/spriteslides.png");
   background-repeat: no-repeat;
   width: 100%;
@@ -19842,26 +19842,26 @@ form.wpcf7-form input[type="submit"]:hover {
   background-position: center -385px;
 }
 
-.StarchiQuote .StarchiQuote-contenido {
+.CallToAction .CallToAction-contenido {
   padding-bottom: 1rem;
   position: relative;
   z-index: 0;
 }
 
 @media (max-width: 1100px) {
-  .StarchiQuote .StarchiQuote-contenido {
+  .CallToAction .CallToAction-contenido {
     padding: 1.5rem;
     text-align: center;
   }
 }
 
 @media (max-width: 880px) {
-  .StarchiQuote .StarchiQuote-contenido {
+  .CallToAction .CallToAction-contenido {
     padding: 0;
   }
 }
 
-.StarchiQuote .StarchiQuote-contenido .StarchiQuote-texto {
+.CallToAction .CallToAction-contenido .CallToAction-texto {
   /*text-align: center;*/
   width: 450px;
   padding: 3rem 0;
@@ -19870,49 +19870,47 @@ form.wpcf7-form input[type="submit"]:hover {
 }
 
 @media (max-width: 880px) {
-  .StarchiQuote .StarchiQuote-contenido .StarchiQuote-texto {
+  .CallToAction .CallToAction-contenido .CallToAction-texto {
     width: 100%;
   }
 }
 
 @media (max-width: 560px) {
-  .StarchiQuote .StarchiQuote-contenido .StarchiQuote-texto {
+  .CallToAction .CallToAction-contenido .CallToAction-texto {
     padding: 0;
   }
 }
 
-.StarchiQuote .StarchiQuote-contenido .StarchiQuote-texto .StarchiQuote-textoCita {
-  /*text-shadow: 1px 1px black;*/
-  /*font-style: italic;*/
-  /*color: white;*/
-  /*font-size: 3rem;*/
-  font-size: 1.3rem;
+.CallToAction .CallToAction-contenido .CallToAction-texto .CallToAction-textoCita {
+  font-weight: bold !important;
+  color: white;
+  font-size: 2.25rem !important;
 }
 
 @media (max-width: 560px) {
-  .StarchiQuote .StarchiQuote-contenido .StarchiQuote-texto .StarchiQuote-textoCita {
+  .CallToAction .CallToAction-contenido .CallToAction-texto .CallToAction-textoCita {
     font-size: 1.8rem;
     margin-top: 5%;
   }
 }
 
-.StarchiQuote .StarchiQuote-contenido .StarchiQuote-texto p {
+.CallToAction .CallToAction-contenido .CallToAction-texto p {
   /*max*/
 }
 
-.StarchiQuote .StarchiQuote-contenido .StarchiQuote-aside {
+.CallToAction .CallToAction-contenido .CallToAction-aside {
   width: 58%;
   display: inline-block;
   text-align: center;
 }
 
 @media (max-width: 880px) {
-  .StarchiQuote .StarchiQuote-contenido .StarchiQuote-aside {
+  .CallToAction .CallToAction-contenido .CallToAction-aside {
     width: 90%;
   }
 }
 
-.StarchiQuote .StarchiQuote-contenido .StarchiQuote-aside .StarchiQuote-contenidoBtn {
+.CallToAction .CallToAction-contenido .CallToAction-aside .CallToAction-contenidoBtn {
   padding: 0.85rem 1.8rem;
   font-size: 20px;
   color: #fff;
@@ -19933,7 +19931,7 @@ form.wpcf7-form input[type="submit"]:hover {
   transition: all 0.5s ease-in-out;
 }
 
-.StarchiQuote .StarchiQuote-contenido .StarchiQuote-aside .StarchiQuote-contenidoBtn::after {
+.CallToAction .CallToAction-contenido .CallToAction-aside .CallToAction-contenidoBtn::after {
   content: "";
   height: 6px;
   width: 100%;
@@ -19947,7 +19945,7 @@ form.wpcf7-form input[type="submit"]:hover {
   border-bottom-left-radius: 2px;
 }
 
-.StarchiQuote .StarchiQuote-contenido .StarchiQuote-aside span {
+.CallToAction .CallToAction-contenido .CallToAction-aside span {
   color: white;
   margin-top: 1.5rem;
 }
@@ -21151,4 +21149,97 @@ form.wpcf7-form input[type="submit"]:hover {
   width: 273px;
   height: 332px;
   background-image: url("images/hibam.png");
+}
+
+.u-btn {
+  padding: 0.85rem 1.8rem;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 2px;
+  text-shadow: none;
+  margin: 0 auto 1rem;
+  display: block;
+  width: auto;
+  background: #008ABC;
+  text-align: center;
+  max-width: 60%;
+  position: relative;
+  z-index: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.u-btn::after {
+  content: "";
+  height: 6px;
+  width: 100%;
+  display: block;
+  background: #045D85;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: -1;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.u-btn:hover {
+  background: #045D85;
+}
+
+.u-btn:hover::after {
+  background: #024361;
+}
+
+.u-btn.rojo {
+  background: #FF3429;
+}
+
+.u-btn.rojo::after {
+  background: #a50c03;
+}
+
+.u-btn.rojo:hover {
+  background: #a50c03;
+  color: #FFFFFF;
+}
+
+.u-btn.rojo:hover::after {
+  background: #820700;
+}
+
+.u-btn.naranja {
+  background: #F37A1F;
+}
+
+.u-btn.naranja::after {
+  background: #B25416;
+}
+
+.u-btn.naranja:hover {
+  background: #B25416;
+  color: #FFFFFF;
+}
+
+.u-btn.naranja:hover::after {
+  background: #8E410F;
+}
+
+.u-btn.verde {
+  background: #00AF51;
+}
+
+.u-btn.verde::after {
+  background: #015F1B;
+}
+
+.u-btn.verde:hover {
+  background: #015F1B;
+  color: #FFFFFF;
+}
+
+.u-btn.verde:hover::after {
+  background: #014614;
 }

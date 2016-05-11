@@ -23,19 +23,19 @@ get_header(); ?>
 
 	<?php primalTestimony();?>
 
-	<?php starchiQuote(); ?>
+	<?php homeCallToAction(); ?>
 
 	<?php primalBlocks(); ?>
 
 	<!-- StarchiBloques -->
-	<section class="StarchiQuote Newsletter u-contenedorCompleto">
+	<section class="CallToAction Newsletter u-contenedorCompleto">
 		<div class="sprite"></div>
-		<form class="StarchiQuote-contenido u-contenedor" action="http://www.solucioneshipermedia.com/sendy/subscribe" method="POST" accept-charset="utf-8" id="sendy-wp-form">
-			<div class="StarchiQuote-texto Newsletter-texto">
-				<h2 class="StarchiQuote-textoCita"><strong>Suscríbete</strong> al newsletter</h2>
+		<form class="CallToAction-contenido u-contenedor" action="http://www.solucioneshipermedia.com/sendy/subscribe" method="POST" accept-charset="utf-8" id="sendy-wp-form">
+			<div class="CallToAction-texto Newsletter-texto">
+				<h2 class="CallToAction-textoCita"><strong>Suscríbete</strong> al newsletter</h2>
 				<p>Recibe correos con promociones e información interesante para ti.</p>
 			</div>
-			<div class="StarchiQuote-aside Newsletter-aside">
+			<div class="CallToAction-aside Newsletter-aside">
 				<div class="input">
 		    		<input type="text" name="email" id="email" placeholder="Escribe aquí tu correo" class="correo">
 					<i class="fa fa-paper-plane"></i>
@@ -43,7 +43,7 @@ get_header(); ?>
 					<input type="hidden" name="Fechadeingreso" id="Fechadeingreso" value="<?php echo date("Y-m-d"); ?>">
 					<input type="hidden" name="list" value="pQsw4XXnRyQodpFe6nAjGA">
 				</div>
-		    	<input class="StarchiQuote-contenidoBtn c-input" type="submit" name="submit" id="submit" value="Me quiero suscribir">
+		    	<input class="CallToAction-contenidoBtn c-input" type="submit" name="submit" id="submit" value="Me quiero suscribir">
 			</div>
 		</form>
 		<div class="sprite-2"></div>

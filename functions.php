@@ -182,11 +182,11 @@ function imgridPortfolio() {
 	get_template_part( 'inc/portfolio/imgrid-portfolio');
 }
 
-/* Quotes
+/* Home Call To Action
  * ------------------------------------------------------------- */
-/* STARCHI; quotes */
-function starchiQuote() {
-	get_template_part( 'inc/quote/starchi-quote');
+/* Llamada a la acción en el home */
+function homeCallToAction() {
+	get_template_part( 'inc/home/home-call-to-action');
 }
 
 /* Contacto
