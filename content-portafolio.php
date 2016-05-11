@@ -112,4 +112,5 @@
 		</div>
 		<!-- Compartir en redes sociales -->
 		<?php anliSocialShare(); ?>
+		<?php comments_template(); ?>
 	</div>

@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php } ?>	
 
 		<?php endwhile; ?>
-		<?php comments_template(); ?>
+		
 	</article>
 </section>
 

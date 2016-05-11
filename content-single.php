@@ -25,6 +25,6 @@
 			<!-- Compartir en redes sociales -->
 			<?php anliSocialShare(); ?>
 		</div>
-		
+		<?php comments_template(); ?>
 	</div>
 				
