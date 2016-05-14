@@ -135,11 +135,12 @@
 					border-bottom: 4px solid #B25416;
 					@include transicion ();
 
-					@media (max-width: $smaller-width) {
+					@media (max-width: $tablet-width) {
 						display: block;
 						margin: 0 auto;
 						float: none;
-						margin-top: 1.5rem;					}
+						margin-top: 1.5rem;	
+						width: 80%;				}
 
 					&::after {
 /*						content: "";

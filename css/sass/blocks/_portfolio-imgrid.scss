@@ -1,8 +1,4 @@
-.Portafolio {
-	@media (max-width: $smaller-width) {
-		/*max-height: 1500px;*/
-	}
-}
+
 
 .Portafolio-contenedor {
 	/*background: #012D62;*/
@@ -32,6 +28,13 @@
 		height: 145px;
 		display: block;
 		background-position: center -149px;
+		
+		@media (max-width: $tablet-width) {
+			background-position: center -355px;
+		}
+
+
+
 	}
 	
 	.Portafolio-heading {
@@ -39,11 +42,19 @@
 		padding-bottom: 0rem;
 		margin-top: -100px;
 
+		@media (max-width: $desktop-width) {
+			width: 90%;
+			margin: 0 auto;
+			margin-top: -100px;
+		}
+
 		h2 {
 			font-size: 3rem;
 			font-weight: 800;
 			color: white;
 			padding: 2rem 0;
+
+
 
 			span {	
 				color: #FDA82F;
@@ -52,11 +63,12 @@
 
 		.caracteristicas-main-titulo {
 			padding-bottom: 3rem;
+
 		}
 
 		p {
 			font-size: 1.125rem;
-			color: #395D88;
+			color: #B4D1F3;
 
 			@media(max-width: $smaller-width) {
 				padding-bottom: 2rem;
@@ -65,7 +77,7 @@
 
 		#filters {
 
-			@media(max-width: $smaller-width) {
+			@media(max-width: $tablet-width) {
 				display: none;
 			}
 		}
@@ -128,12 +140,11 @@
 
 	.Portafolio {
 
+		@media (max-width: $tablet-width) {
+			display: none;
+		}
+
 		.Portafolio-block {
-
-			@media (max-width: $smaller-width) {
-				/*position: relative !important;*/
-			}
-
 
 			&:hover{
 
@@ -165,5 +176,11 @@
 			}
 		}
 	}
+	
+	.Portafolio-btnResponsive {
+		margin: 2rem auto 1rem; 
+
+	}
+
 }
 

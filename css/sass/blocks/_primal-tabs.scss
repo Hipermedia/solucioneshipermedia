@@ -226,6 +226,7 @@
 
 					@media (max-width: $tablet-width) {
 						width: 100%;
+
 					}
 
 					img {
@@ -234,7 +235,9 @@
 						margin: 0 auto;
 
 						@media (max-width: $tablet-width) {
-							width: 100%;
+							width: auto;
+							max-width: 90%;
+							max-height: 300px;
 						}
 					}
 

@@ -15,21 +15,20 @@
 	bottom: 0;
 	@include transicion();
 	
-	@media (max-width: $tablet-width) {
-		width: 100%;
-		max-width: 100%;
+	@media (max-width: $desktop-width) {
+		width: $tablet-width;
 		position: relative;
 		display: block;
-		top: 0;
-		padding-bottom: 1.5rem;
-		margin: 0;
+		margin: 0 auto;
+		float: none;
+	}
+
+	@media (max-width: $tablet-width) {
+		padding-bottom: 2rem;
 	}
 	
 	/* Clase que se le agrega al nav cuando se hace scroll */
 	&.tiny { 
-	  /*top: .5rem;*/
-	  margin: 0;
-
 	  ul {
 
 	  	li {

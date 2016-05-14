@@ -16888,7 +16888,7 @@ table table {
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header {
     position: relative;
     height: auto;
@@ -16902,7 +16902,7 @@ table table {
   position: fixed;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header--tiny {
     height: auto;
     position: relative;
@@ -16913,7 +16913,7 @@ table table {
   height: 95px;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header--tiny:hover {
     height: auto;
   }
@@ -16935,7 +16935,7 @@ table table {
   transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header .Header-contenidoBefore {
     height: auto;
     text-align: center;
@@ -16946,7 +16946,7 @@ table table {
   height: 0;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header .Header-contenidoBefore.tiny {
     height: auto;
   }
@@ -16956,7 +16956,7 @@ table table {
   height: 40px;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header .Header-contenidoBefore.tiny:hover {
     height: auto;
   }
@@ -17001,7 +17001,7 @@ table table {
   overflow: hidden;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header .Header-contenidoBefore .u-contenedor .social {
     display: inline-block;
     /*width: 100%;*/
@@ -17067,7 +17067,7 @@ table table {
   height: 55px;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header .Header-contenido.tiny {
     height: auto;
   }
@@ -17100,7 +17100,7 @@ table table {
   margin-top: 0;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header .Header-contenido .Header-logo {
     max-width: 100%;
     width: 100%;
@@ -17121,7 +17121,7 @@ table table {
   transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header .Header-contenido .Header-logo img {
     width: 75%;
   }
@@ -17131,7 +17131,7 @@ table table {
   max-width: 144px;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .Header .Header-contenido .Header-logo img.tiny {
     height: auto;
     max-width: 320px;
@@ -17270,7 +17270,7 @@ table table {
 
 @media (max-width: 880px) {
   .Footer .Footer-bloque .Footer-bloqueLogo img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -18323,8 +18323,13 @@ form.wpcf7-form input[type="submit"]:hover {
 /*------------------[BLOCKS]----------------------*/
 /*------------------------------------------------*/
 .PrimalBlocks {
-  /*padding-top: 6rem;*/
   background: white;
+}
+
+@media (max-width: 880px) {
+  .PrimalBlocks.inHome {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -18605,8 +18610,13 @@ form.wpcf7-form input[type="submit"]:hover {
 /*------------------[BLOCKS]----------------------*/
 /*------------------------------------------------*/
 .PrimalTestimony {
-  /*padding-top: 6rem;*/
   background: #CCCCCC;
+}
+
+@media (max-width: 880px) {
+  .PrimalTestimony {
+    display: none;
+  }
 }
 
 .PrimalTestimony a {
@@ -18779,21 +18789,20 @@ form.wpcf7-form input[type="submit"]:hover {
   /* Clase del botón del menú que se muestra en pantallas pequeñas */
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .primalMainNav {
-    width: 100%;
-    max-width: 100%;
+    width: 880px;
     position: relative;
     display: block;
-    top: 0;
-    padding-bottom: 1.5rem;
-    margin: 0;
+    margin: 0 auto;
+    float: none;
   }
 }
 
-.primalMainNav.tiny {
-  /*top: .5rem;*/
-  margin: 0;
+@media (max-width: 880px) {
+  .primalMainNav {
+    padding-bottom: 2rem;
+  }
 }
 
 .primalMainNav.tiny ul li a {
@@ -19054,7 +19063,7 @@ form.wpcf7-form input[type="submit"]:hover {
 
 @media (max-width: 1100px) {
   .PrimalSlider .PrimalSlider-contenido .PrimalSlider-slide .PrimalSlider-slideCaption {
-    padding-bottom: 3rem;
+    padding: 2rem;
   }
 }
 
@@ -19173,6 +19182,12 @@ form.wpcf7-form input[type="submit"]:hover {
   width: auto;
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .PrimalSlider .PrimalSlider-contenido .PrimalSlider-slide .PrimalSlider-slideCaption .PrimalSlider-captionImage img {
+    width: 50%;
+  }
 }
 
 .PrimalSlider .PrimalSlider-contenido .flex-control-nav {
@@ -19532,6 +19547,12 @@ form.wpcf7-form input[type="submit"]:hover {
 }
 
 @media (max-width: 880px) {
+  .Filmstrip.inHome {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
   .Filmstrip {
     text-align: center;
   }
@@ -19636,10 +19657,6 @@ form.wpcf7-form input[type="submit"]:hover {
   }
 }
 
-.Portafolio {
-  /*max-height: 1500px;*/
-}
-
 .Portafolio-contenedor {
   /*background: #012D62;*/
   background-image: url("images/bg-portafolio.jpg");
@@ -19673,10 +19690,24 @@ form.wpcf7-form input[type="submit"]:hover {
   background-position: center -149px;
 }
 
+@media (max-width: 880px) {
+  .Portafolio-contenedor .sprite-2 {
+    background-position: center -355px;
+  }
+}
+
 .Portafolio-contenedor .Portafolio-heading {
   text-align: center;
   padding-bottom: 0rem;
   margin-top: -100px;
+}
+
+@media (max-width: 1100px) {
+  .Portafolio-contenedor .Portafolio-heading {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -100px;
+  }
 }
 
 .Portafolio-contenedor .Portafolio-heading h2 {
@@ -19696,7 +19727,7 @@ form.wpcf7-form input[type="submit"]:hover {
 
 .Portafolio-contenedor .Portafolio-heading p {
   font-size: 1.125rem;
-  color: #395D88;
+  color: #B4D1F3;
 }
 
 @media (max-width: 560px) {
@@ -19705,7 +19736,7 @@ form.wpcf7-form input[type="submit"]:hover {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 880px) {
   .Portafolio-contenedor .Portafolio-heading #filters {
     display: none;
   }
@@ -19774,8 +19805,10 @@ form.wpcf7-form input[type="submit"]:hover {
   opacity: 1;
 }
 
-.Portafolio-contenedor .Portafolio .Portafolio-block {
-  /*position: relative !important;*/
+@media (max-width: 880px) {
+  .Portafolio-contenedor .Portafolio {
+    display: none;
+  }
 }
 
 .Portafolio-contenedor .Portafolio .Portafolio-block:hover figcaption h2 {
@@ -19801,6 +19834,10 @@ form.wpcf7-form input[type="submit"]:hover {
   padding: 0 1rem;
 }
 
+.Portafolio-contenedor .Portafolio-btnResponsive {
+  margin: 2rem auto 1rem;
+}
+
 /*--Call to Action*/
 /*------------------------------------------------*/
 /*------------------[BLOCKS]----------------------*/
@@ -19821,6 +19858,12 @@ form.wpcf7-form input[type="submit"]:hover {
   .CallToAction {
     background-size: auto auto;
     background-attachment: local;
+  }
+}
+
+@media (max-width: 880px) {
+  .CallToAction.inHome {
+    display: none;
   }
 }
 
@@ -20428,7 +20471,9 @@ form.wpcf7-form input[type="submit"]:hover {
 
 @media (max-width: 880px) {
   .PrimalTabs .PrimalTabs-contenido .PrimalTabs-contenedor .PrimalTabs-contenedorPanel .PrimalTabs-panelFigure img {
-    width: 100%;
+    width: auto;
+    max-width: 90%;
+    max-height: 300px;
   }
 }
 
@@ -20876,12 +20921,13 @@ form.wpcf7-form input[type="submit"]:hover {
   transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 880px) {
   .Contacto .Contacto-formulario .wpcf7 .enviar input {
     display: block;
     margin: 0 auto;
     float: none;
     margin-top: 1.5rem;
+    width: 80%;
   }
 }
 

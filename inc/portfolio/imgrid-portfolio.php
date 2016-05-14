@@ -55,5 +55,8 @@
 		<?php endif; ?>
 	</div>
 
+	<!-- Enlace al portafolio para pantallas pequeñas -->
+	<a class="u-btn Portafolio-btnResponsive" href="http://www.solucioneshipermedia.com/portafolio/">Ver portafolio</a>
+
 	<div class="sprite-2"></div>
 </section>

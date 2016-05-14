@@ -1,6 +1,13 @@
 .Filmstrip {
 	background: white;
 
+	// Elimino el bloque si esta en home
+	&.inHome {
+		@media (max-width: $tablet-width) {
+			display: none;
+		}
+	}
+
 	@media (max-width: $tablet-width) {
 		text-align: center;
 	}

@@ -4,7 +4,7 @@
 ?>
 
 <!-- StarchiBloques -->
-<section class="CallToAction u-contenedorCompleto">
+<section class="CallToAction u-contenedorCompleto inHome">
 
 	<div class="sprite">
 		

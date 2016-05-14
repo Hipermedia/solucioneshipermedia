@@ -130,12 +130,21 @@ function filmstripSlider() {
 	get_template_part( 'inc/sliders/filmstrip-slider');
 }
 
+/* CLIENTES; en portada */
+function homeClientes() {
+	get_template_part( 'inc/sliders/home-clientes');
+}
 
 /* Bloques
  * ------------------------------------------------------------- */
-/* PRIMAL; bloques */
+/* PRIMAL; blog */
 function primalBlocks() {
 	get_template_part( 'inc/blocks/primal-blocks');
+}
+
+/* PRIMAL; blog en portada */
+function homeBlog() {
+	get_template_part( 'inc/blocks/home-blog');
 }
 /* SAUTE; bloques */
 function sauteBlocks() {

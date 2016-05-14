@@ -3,9 +3,15 @@
 /*------------------------------------------------*/
 // PRIMAL
 .PrimalBlocks {
-	/*padding-top: 6rem;*/
 	background: white;
 	
+	// Elimino el bloque si esta en home
+	&.inHome {
+		@media (max-width: $tablet-width) {
+			display: none;
+		}
+	}
+
 	.PrimalBlocks-contenido {
 		// Responsive
 		@media (max-width: $desktop-width) {

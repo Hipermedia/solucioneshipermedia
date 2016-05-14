@@ -16,7 +16,12 @@
 		background-size: auto auto;
 		background-attachment: local; 
 	}
-
+	// Oculta la llamada ala acción que esta en portada
+	&.inHome {
+		@media (max-width: $tablet-width) {
+			display: none;
+		}
+	}
 	.sprite {
 		background-image: url('images/spriteslides.png');
 		background-repeat: no-repeat;

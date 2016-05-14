@@ -3,8 +3,13 @@
 /*------------------------------------------------*/
 
 .PrimalTestimony {
-	/*padding-top: 6rem;*/
 	background: #CCCCCC;
+	
+	@media (max-width: $tablet-width) {
+		display: none;
+	}
+
+
 
 	a {
 		color: inherit;

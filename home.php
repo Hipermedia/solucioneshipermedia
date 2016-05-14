@@ -25,10 +25,10 @@ get_header(); ?>
 
 	<?php homeCallToAction(); ?>
 
-	<?php primalBlocks(); ?>
+	<?php homeBlog(); ?>
 
 	<!-- StarchiBloques -->
-	<section class="CallToAction Newsletter u-contenedorCompleto">
+	<section class="CallToAction Newsletter u-contenedorCompleto inHome">
 		<div class="sprite"></div>
 		<form class="CallToAction-contenido u-contenedor" action="http://www.solucioneshipermedia.com/sendy/subscribe" method="POST" accept-charset="utf-8" id="sendy-wp-form">
 			<div class="CallToAction-texto Newsletter-texto">
@@ -49,7 +49,7 @@ get_header(); ?>
 		<div class="sprite-2"></div>
 	</section>
 
-	<?php filmstripSlider(); ?>
+	<?php homeClientes(); ?>
 	
 	<a name="shcontacto"></a>
 	<section class="Contacto">

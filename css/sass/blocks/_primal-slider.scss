@@ -27,7 +27,7 @@
 				left: 0;
 				margin: 0 auto;
 				@media (max-width: $desktop-width) {
-					padding-bottom: 3rem;
+					padding: 2rem;
 				}
 
 				@media (max-width: $tablet-width) {
@@ -114,6 +114,8 @@
 					width: 49%;
 					vertical-align: middle;
 
+					
+
 					@media (max-width: $tablet-width) {
 						display: none;
 					}
@@ -122,6 +124,10 @@
 						width: auto;
 						display: block;
 						margin: 0 auto;
+
+						@media (max-width: $desktop-width) {
+							width: 50%;
+						}
 					}
 				}
 				
