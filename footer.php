@@ -2,7 +2,7 @@
 /* Footer
  ----------------------------------*/
 ?>
-    <?php if(!is_home()) : ?>
+    <?php if(!is_home() && !is_page_template( 'sh-page-contacto.php' )) : ?>
         <div class="sprite-2"></div>
     <?php endif; ?>
 
@@ -50,9 +50,9 @@
     		<ul>
     			<li><a href="<?php inicio_url(); ?>">Inicio</a></li>
     			<li><a href="<?php inicio_url(); ?>/#shservicios">Servicios</a></li>
-    			<li><a href="<?php inicio_url(); ?>/#shportafolio">Portafolio</a></li>
-    			<li><a href="<?php inicio_url(); ?>/#shcontacto">Contacto</a></li>
-    			<li><a href="<?php inicio_url(); ?>">No hacer click aquí</a></li>
+    			<li><a href="<?php inicio_url(); ?>/portafolio/">Portafolio</a></li>
+    			<li><a href="<?php inicio_url(); ?>/contacto/">Contacto</a></li>
+    			<li><a href="<?php inicio_url(); ?>/hola-insurgente/">No hacer click aquí</a></li>
     		</ul>
     	</div>
 
