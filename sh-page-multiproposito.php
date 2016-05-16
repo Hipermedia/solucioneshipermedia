@@ -21,11 +21,11 @@ get_header(); ?>
 	    <article class="Page u-contenido">	
 
 			<!-- Imágen destacada -->
-			<figure class="Post-featuredImage" style="background-image: url('<?php if($url) { echo $url; } else { the_field('destacadaDefault', 'option'); } ?>');">
+			<figure class="Post-featuredImage" style="background-image: url('<?php if($url) { echo $url; } else { the_field('imgBgPages', 'option'); } ?>');">
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'large' ); ?>
 				<?php else : ?>
-					<img src="<?php the_field('destacadaDefault'); ?>" alt="">
+					<img src="<?php the_field('imgBgPages', 'option'); ?>" alt="">
 				<?php endif; ?>
 
 				<figcaption class="u-contenedor">

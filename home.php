@@ -32,7 +32,7 @@ get_header(); ?>
 		<div class="sprite"></div>
 		<form class="CallToAction-contenido u-contenedor" action="http://www.solucioneshipermedia.com/sendy/subscribe" method="POST" accept-charset="utf-8" id="sendy-wp-form">
 			<div class="CallToAction-texto Newsletter-texto">
-				<h2 class="CallToAction-textoCita"><strong>Suscríbete</strong> al newsletter</h2>
+				<h2 class="CallToAction-textoCita">Únete a nuestra <strong>comunidad</strong></h2>
 				<p>Recibe correos con promociones e información interesante para ti.</p>
 			</div>
 			<div class="CallToAction-aside Newsletter-aside">

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*
+/*
 Theme Name: SHipermedia
 Theme URI: http://www.solucioneshipermedia.com/
 Author: Soluciones Hipermedia
@@ -19838,9 +19839,160 @@ form.wpcf7-form input[type="submit"]:hover {
   margin: 2rem auto 1rem;
 }
 
+.Portafolio-page {
+  padding: 2rem 0 0;
+}
+
+@media (max-width: 880px) {
+  .Portafolio-page {
+    background-image: none;
+    background-color: #012A60 !important;
+  }
+}
+
+.Portafolio-page .Portafolio-heading {
+  text-align: center;
+  padding-bottom: 0rem;
+  margin-top: -100px;
+}
+
+@media (max-width: 1100px) {
+  .Portafolio-page .Portafolio-heading {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -100px;
+  }
+}
+
+.Portafolio-page .Portafolio-heading .caracteristicas-main-titulo {
+  padding-bottom: 3rem;
+}
+
+.Portafolio-page .Portafolio-heading h2 {
+  color: #024361;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 560px) {
+  .Portafolio-page .Portafolio-heading h2 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .Portafolio-page .Portafolio-heading #filters {
+    display: none;
+  }
+}
+
+.Portafolio-page .Portafolio-heading ul {
+  padding: 0;
+  font-size: 1.125rem;
+  list-style: none;
+  overflow: hidden;
+  color: white;
+  margin-bottom: 0;
+}
+
+@media (max-width: 880px) {
+  .Portafolio-page .Portafolio-heading ul {
+    padding: 0;
+  }
+}
+
+.Portafolio-page .Portafolio-heading ul li {
+  display: inline-block;
+  margin: 0 .83%;
+  cursor: pointer;
+}
+
+.Portafolio-page .Portafolio-heading ul li h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  color: #045D85;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.Portafolio-page .Portafolio-heading ul li h3:hover {
+  color: #FDA82F;
+}
+
+.Portafolio-page .Portafolio-heading ul li h3:hover::after {
+  opacity: 1;
+}
+
+.Portafolio-page .Portafolio-heading ul li h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #FDA82F;
+  bottom: 0;
+  margin-top: 1rem;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.Portafolio-page .Portafolio-heading ul li .active {
+  color: #FDA82F;
+}
+
+.Portafolio-page .Portafolio-heading ul li .active::after {
+  background: #FDA82F;
+  opacity: 1;
+}
+
+.Portafolio-page .Portafolio {
+  background: #ccc;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 880px) {
+  .Portafolio-page .Portafolio {
+    display: none;
+  }
+}
+
+.Portafolio-page .Portafolio .Portafolio-block:hover figcaption h2 {
+  opacity: 1;
+}
+
+.Portafolio-page .Portafolio .Portafolio-block figcaption h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.Portafolio-page .Portafolio .Portafolio-block figcaption h2:hover {
+  opacity: 1;
+}
+
+.Portafolio-page .Portafolio .Portafolio-block figcaption .description {
+  font-size: .8rem !important;
+  padding: 0 1rem;
+}
+
+.Portafolio-page .separador-final {
+  display: block;
+  width: 100%;
+  height: 5rem;
+  background: #ccc;
+}
+
 /*--Call to Action*/
 /*------------------------------------------------*/
-/*------------------[BLOCKS]----------------------*/
+/*-----------------[CallToAction]-----------------*/
 /*------------------------------------------------*/
 .CallToAction {
   background-attachment: fixed;
@@ -19849,9 +20001,6 @@ form.wpcf7-form input[type="submit"]:hover {
   position: relative;
   background-position: bottom;
   background-color: #032B5E;
-  /*opacity: .8;*/
-  /*height: 35vh;*/
-  /*background: #012351;*/
 }
 
 @media (max-width: 880px) {
@@ -19886,7 +20035,6 @@ form.wpcf7-form input[type="submit"]:hover {
 }
 
 .CallToAction .CallToAction-contenido {
-  padding-bottom: 1rem;
   position: relative;
   z-index: 0;
 }
@@ -19906,15 +20054,16 @@ form.wpcf7-form input[type="submit"]:hover {
 
 .CallToAction .CallToAction-contenido .CallToAction-texto {
   /*text-align: center;*/
-  width: 450px;
-  padding: 3rem 0;
+  width: 55%;
+  padding: 0 0 4rem;
   display: inline-block;
   color: white;
 }
 
 @media (max-width: 880px) {
   .CallToAction .CallToAction-contenido .CallToAction-texto {
-    width: 100%;
+    width: 90%;
+    margin: 0 5%;
   }
 }
 
@@ -19924,25 +20073,23 @@ form.wpcf7-form input[type="submit"]:hover {
   }
 }
 
-.CallToAction .CallToAction-contenido .CallToAction-texto .CallToAction-textoCita {
-  font-weight: bold !important;
-  color: white;
-  font-size: 2.25rem !important;
+.CallToAction .CallToAction-contenido .CallToAction-texto h2 {
+  font-size: 3rem !important;
 }
 
 @media (max-width: 560px) {
-  .CallToAction .CallToAction-contenido .CallToAction-texto .CallToAction-textoCita {
+  .CallToAction .CallToAction-contenido .CallToAction-texto h2 {
     font-size: 1.8rem;
     margin-top: 5%;
   }
 }
 
-.CallToAction .CallToAction-contenido .CallToAction-texto p {
-  /*max*/
+.CallToAction .CallToAction-contenido .CallToAction-texto h2 strong {
+  color: #FF9800;
 }
 
 .CallToAction .CallToAction-contenido .CallToAction-aside {
-  width: 58%;
+  width: 44%;
   display: inline-block;
   text-align: center;
 }
@@ -19950,6 +20097,7 @@ form.wpcf7-form input[type="submit"]:hover {
 @media (max-width: 880px) {
   .CallToAction .CallToAction-contenido .CallToAction-aside {
     width: 90%;
+    margin: 0 5%;
   }
 }
 
@@ -20036,12 +20184,6 @@ form.wpcf7-form input[type="submit"]:hover {
     padding: 0 1rem !important;
     text-align: center;
   }
-}
-
-.Newsletter .Newsletter-texto h2 {
-  font-weight: bold !important;
-  color: #FDA82F;
-  font-size: 2.25rem !important;
 }
 
 .Newsletter .Newsletter-texto h2 strong {

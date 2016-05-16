@@ -1,5 +1,5 @@
 /*------------------------------------------------*/
-/*------------------[BLOCKS]----------------------*/
+/*-----------------[CallToAction]-----------------*/
 /*------------------------------------------------*/
 
 .CallToAction {
@@ -9,9 +9,7 @@
 	position: relative;
 	background-position: bottom;
 	background-color: #032B5E;
-	/*opacity: .8;*/
-	/*height: 35vh;*/
-	/*background: #012351;*/
+
 	@media (max-width: $tablet-width) {
 		background-size: auto auto;
 		background-attachment: local; 
@@ -41,7 +39,6 @@
 	}
 
 	.CallToAction-contenido {
-		padding-bottom: 1rem;
 		position: relative;
 		z-index: 0;
 		@media (max-width: $desktop-width) {
@@ -54,46 +51,40 @@
 
 		.CallToAction-texto {
 			/*text-align: center;*/
-			width: 450px;
-			padding: 3rem 0;
+			width: 55%;
+			padding: 0 0 4rem;
 			display: inline-block;
 			color: white;
 
 			@media (max-width: $tablet-width) {
-				width: 100%;
+				width: 90%;
+				margin: 0 5%;
 			}
-
 			@media (max-width: $smaller-width) {
 				padding: 0;
 			}
-
-			.CallToAction-textoCita {
-				font-weight: bold !important;
-    			color: white;
-    			font-size: 2.25rem !important;
+			h2 {
+    			font-size: 3rem !important;
 				@media (max-width: $smaller-width) {
 					font-size: 1.8rem;
 					margin-top: 5%;
 				}
-
-				strong {
-					
-					
+				strong {					
+					color: $support-color;
 				}
 			}
-
 			p {
-				/*max*/
+				
 			}
 		}
-
 		.CallToAction-aside {
-			width: 58%;
+			width: 44%;
 			display: inline-block;
 			text-align: center;
 
 			@media (max-width: $tablet-width) {
 				width: 90%;
+				margin: 0 5%;
 			}
 
 			.CallToAction-contenidoBtn {
@@ -177,10 +168,7 @@
 		}
 
 		h2 {
-			font-weight: bold !important;
-			color: #FDA82F;
-			font-size: 2.25rem !important;
-
+			
 			strong {
 				color: white;
 				font-size: 3rem !important;

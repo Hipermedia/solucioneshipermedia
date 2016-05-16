@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-<section class="u-contenedor">
+<section class="u-contenedorCompleto">
 
 	<?php while ( have_posts() ) : the_post(); ?>
 	   	<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 				</figcaption>
 				<div class="sprite"></div>
 			</figure>
-
+			
 			<div class="u-wp-contenido">
 				<?php the_content(); ?>	
 				<!-- Compartir en redes sociales -->
