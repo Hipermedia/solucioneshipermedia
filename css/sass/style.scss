@@ -243,7 +243,75 @@ Text Domain: shipermedia
 }
 
 
-.hunabix, .hibam {
+.Hunabix {
+	margin: 3rem auto 4rem;
+	position: relative;
+
+	.Hunabix-title {
+		position: absolute;
+		top: 0;
+		width: 800px;
+		right: 0;
+		display: block;
+		color: #444444;
+		font-size: 3rem;
+		font-weight: 600;
+
+		@media (max-width: $desktop-width) {
+			position: relative;
+			width: 90%;
+			margin: 0 5%;
+			padding-bottom: 2rem;
+			text-align: center;
+			font-size: 2.5rem;
+		}
+
+		strong {
+			color: $support-color;
+			font-weight: 800;
+		}
+	}
+	.Hunabix-content {
+		background: #EEEEEE;
+		position: relative;
+		border-radius: 10px;
+		border: 6px solid #444;
+		padding: 0 2rem;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
+		margin-top: 280px;
+		margin-bottom: 2rem;
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+		min-height: 300px;
+		font-size: 1.35rem;
+
+		li {
+			margin-bottom: .9rem;
+		}	
+
+		img {
+			@media (max-width: $desktop-width) {
+				width: auto;
+				max-width: 100%;
+				clear: both;
+				float: none;
+			}
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -281px;
+			width: 270px;
+			height: 317px;
+			background-image: url('images/hunabix.png');
+		}
+	}
+}
+
+
+.hibam {
 	background: #EEEEEE;
 	margin-bottom: 2rem;
 	position: relative;
@@ -252,24 +320,6 @@ Text Domain: shipermedia
 	padding: 0 2rem;
 	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
 }
-
-.hunabix{
-	margin-top: 280px;
-	padding-top: 3rem;
-	padding-bottom: 2rem;
-	min-height: 300px;
-
-	&:before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: -281px;
-		width: 270px;
-		height: 317px;
-		background-image: url('images/hunabix.png');
-	}
-}
-
 .hibam{
 	margin-top: 100px;
 	padding-top: 3rem;

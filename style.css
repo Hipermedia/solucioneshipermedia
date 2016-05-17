@@ -21291,24 +21291,67 @@ form.wpcf7-form input[type="submit"]:hover {
   }
 }
 
-.hunabix, .hibam {
-  background: #EEEEEE;
-  margin-bottom: 2rem;
+.Hunabix {
+  margin: 3rem auto 4rem;
   position: relative;
-  border-radius: 3px;
-  border: 2px solid #333;
-  padding: 0 2rem;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
 }
 
-.hunabix {
+.Hunabix .Hunabix-title {
+  position: absolute;
+  top: 0;
+  width: 800px;
+  right: 0;
+  display: block;
+  color: #444444;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .Hunabix .Hunabix-title {
+    position: relative;
+    width: 90%;
+    margin: 0 5%;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
+.Hunabix .Hunabix-title strong {
+  color: #FF9800;
+  font-weight: 800;
+}
+
+.Hunabix .Hunabix-content {
+  background: #EEEEEE;
+  position: relative;
+  border-radius: 10px;
+  border: 6px solid #444;
+  padding: 0 2rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
   margin-top: 280px;
+  margin-bottom: 2rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
   min-height: 300px;
+  font-size: 1.35rem;
 }
 
-.hunabix:before {
+.Hunabix .Hunabix-content li {
+  margin-bottom: .9rem;
+}
+
+@media (max-width: 1100px) {
+  .Hunabix .Hunabix-content img {
+    width: auto;
+    max-width: 100%;
+    clear: both;
+    float: none;
+  }
+}
+
+.Hunabix .Hunabix-content:before {
   content: "";
   display: block;
   position: absolute;
@@ -21316,6 +21359,16 @@ form.wpcf7-form input[type="submit"]:hover {
   width: 270px;
   height: 317px;
   background-image: url("images/hunabix.png");
+}
+
+.hibam {
+  background: #EEEEEE;
+  margin-bottom: 2rem;
+  position: relative;
+  border-radius: 3px;
+  border: 2px solid #333;
+  padding: 0 2rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
 }
 
 .hibam {

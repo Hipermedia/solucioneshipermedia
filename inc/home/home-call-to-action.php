@@ -1,9 +1,9 @@
 <?php 
-/** Sección de texto. Estilo Starchi
+/** Bloque de llamada a la acción en portada
 ------------------------------------------------------------------- */ 
 ?>
 
-<!-- StarchiBloques -->
+<!-- CallToAction -->
 <section class="CallToAction u-contenedorCompleto inHome">
 	<!-- Sprite decorativo superior -->
 	<div class="sprite"></div>

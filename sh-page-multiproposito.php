@@ -18,20 +18,21 @@ get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 	   	<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>
-	    <article class="Page u-contenido">	
+	    <article class="Page u-contenido">
 
-			<!-- Imágen destacada -->
-			<figure class="Post-featuredImage" style="background-image: url('<?php if($url) { echo $url; } else { the_field('imgBgPages', 'option'); } ?>');">
+			<!-- Título del artículo -->
+			<figure class="Post-featuredImage" style="background-image: url('<?php if($url) { echo $url; } else { the_field('imgBgPages', 'option'); } ?>');">			
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'large' ); ?>
 				<?php else : ?>
-					<img src="<?php the_field('imgBgPages', 'option'); ?>" alt="">
+					<img src="<?php the_field('imgBgPages', 'option'); ?>" alt="<?php the_title(); ?>">
 				<?php endif; ?>
-
+				
+				<!-- Texto del título -->
 				<figcaption class="u-contenedor">
-					<!-- Título del artículo -->
 					<h1 class="Post-title"><?php the_title(); ?></h1>
 				</figcaption>
+				<!-- Sprite decorativo -->
 				<div class="sprite"></div>
 			</figure>
 
@@ -108,64 +109,55 @@ get_header(); ?>
 					
 					<!-- Bloque: Llamada a la acción -->
 					<?php if( get_row_layout() == 'calltoaction_layout' ): ?>
-						<section class="StarchiQuote u-contenedorCompleto">
+						<section class="CallToAction u-contenedorCompleto inHome">
+							<!-- Sprite decorativo superior -->
 							<div class="sprite"></div>
 							<!-- Contenedor -->
-							<div class="StarchiQuote-contenido u-contenedor">
-								<div class="StarchiQuote-texto">
-									<h2 class="StarchiQuote-textoCita"><?php the_sub_field('titulo'); ?></h2>
+							<div class="CallToAction-contenido u-contenedor">
+								<!-- Textos de la llamada a la acción -->
+								<div class="CallToAction-texto">
+									<h2><?php the_sub_field('titulo'); ?></h2>
 									<p><?php the_sub_field('subtitulo'); ?></p>
 								</div>
-								<div class="StarchiQuote-aside">
-									<a class="StarchiQuote-contenidoBtn" href="" data-toggle="modal" data-target="#myModal"><?php the_sub_field('boton') ?></a>
-									<a href=""><?php the_sub_field('texto'); ?></a>
+								<!-- Botón de llamada a la acción -->
+								<div class="CallToAction-aside">
+									<!-- Si se eligió que sea de tipo enlace -->
+									<?php if (get_sub_field('tipoAccion') == 'modal') : ?>
+										<a class="CallToAction-contenidoBtn" href="" data-toggle="modal" data-target="#myModal"><?php the_sub_field('boton') ?></a>
+									<!-- Si se eligió que sea un modal -->
+									<?php else : ?>
+										<a class="CallToAction-contenidoBtn" href="<?php the_sub_field('urlBtn') ?>"><?php the_sub_field('boton') ?></a>
+									<?php endif; ?>
+									<!-- Comentario final -->
+									<?php if (get_sub_field('texto')) : ?>
+										<a href="<?php the_sub_field('urlTexto'); ?> ">
+											<?php the_sub_field('texto'); ?>
+										</a>
+									<?php endif; ?>
 								</div>
 							</div>
+							<!-- Sprite decorativo -->
 							<div class="sprite-2"></div>
 						</section>
-
-						<!-- Modal -->
+						<!-- Modal de la llamada a la acción-->
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-						  	<div class="modal-dialog" role="document">
-						    	<div class="modal-content">
-						      		<div class="modal-header">
-						        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						        		<h4 class="modal-title" id="myModalLabel">Solicitar una demostración</h4>
-						      		</div>
-						      		<div class="modal-body">
-										<?php echo do_shortcode('[contact-form-7 id="190" title="Demostración"]'); ?>
-						      		</div>
-						      		<div class="modal-footer">
-						        		<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-						      		</div>
-						    	</div>
-						  	</div>
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content Contacto">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title" id="myModalLabel"><?php the_sub_field('boton') ?></h4>
+						      </div>
+						      <div class="modal-body Contacto-formulario">
+									<?php echo do_shortcode(get_sub_field('modalBtn')); ?>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						      </div>
+						    </div>
+						  </div>
 						</div>
-					<?php endif;  ?> 
+					<?php endif;  ?>
 
-					<!-- Bloque: Llamada ala acción -->
-					<?php if( get_row_layout() == 'calltoactioninput_layout' ): ?>
-						<!-- StarchiBloques -->
-						<section class="StarchiQuote Newsletter u-contenedorCompleto">
-							<div class="sprite"></div>
-							<!-- Contenedor -->
-							<div class="StarchiQuote-contenido u-contenedor">
-								<div class="StarchiQuote-texto Newsletter-texto">
-									<h2 class="StarchiQuote-textoCita"><?php the_sub_field('titulo'); ?></h2>
-									<p><?php the_sub_field('subtitulo'); ?></p>
-								</div>
-								<div class="StarchiQuote-aside Newsletter-aside">
-									<div class="input">
-										<input class="correo" type="text" placeholder="<?php the_sub_field('placeholder'); ?>">
-										<i class="fa fa-paper-plane"></i>
-									</div>
-									<a class="StarchiQuote-contenidoBtn" href=""><?php the_sub_field('boton'); ?></a>
-								</div>
-							</div>
-							<div class="sprite-2"></div>
-						</section>
-					<?php endif;  ?>  
-					
 					<!-- Bloque: Filmstrip -->					
 					<?php if( get_row_layout() == 'filmstrip_layout' ): ?>
 						<div class="Filmstrip">
@@ -195,9 +187,9 @@ get_header(); ?>
 
 					<!-- Bloque: Hunabix -->
 					<?php if( get_row_layout() == 'hunabix_layout' ): ?>
-						<div class="u-contenedor">
-							<h2 class=""><?php the_sub_field('titulo'); ?></h2>
-							<div class="hunabix">
+						<div class="u-contenedor Hunabix">
+							<h2 class="Hunabix-title"><?php the_sub_field('titulo'); ?></h2>
+							<div class="Hunabix-content">
 								<?php the_sub_field('contenido'); ?>
 							</div>
 						</div>
