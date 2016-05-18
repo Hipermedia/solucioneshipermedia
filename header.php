@@ -60,6 +60,11 @@
   ================================================== -->
 <?php the_field('zopimChatScript', 'option'); ?>
 
+<!--Pixel de Facebook
+  ================================================== -->
+<?php the_field('facebookPixelScript', 'option'); ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>
